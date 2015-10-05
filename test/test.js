@@ -4,10 +4,16 @@ import should from 'should';
 import TargetSelector from '../src/helpers/target';
 import Coordinate from '../src/helpers/coordinate';
 import Player from '../src/helpers/player';
-import Constants from '../src/constants';
+import Item from '../src/helpers/item';
+
 import Commands from '../src/commands';
 
-const {Say, Tell, Spawnpoint} = Commands;
+const {
+  Say,
+  Tell,
+  Spawnpoint,
+  Give
+  } = Commands;
 
 const target_selector = new TargetSelector('p', {
   coordinate: [100, undefined, 300]
@@ -90,6 +96,25 @@ describe('Spawnpoint Command', function () {
     it('should return /spawnpoint @p[x=100,z=300] 10 20 30', function () {
       assert.equal(spawn.toString(), '/spawnpoint @p[x=100,z=300] 10 20 30');
     });
+  });
+
+});
+
+describe('Give', function () {
+
+  describe('#new(player, item, amount, data, dataTag)', function () {
+    let give = new Give(
+      new Player('Mike'),
+      new Item('apple'),
+      64,
+      1,
+      {display: {Lore: ["Apple here"]}}
+    );
+
+    it('should return /give Mike minecraft:apple 64 1 {display:{Lore:["Apple here"]}}', function () {
+      assert.equal(give.toString(), '/give Mike minecraft:apple 64 1 {display:{Lore:["Apple here"]}}');
+    });
+
   });
 
 });
