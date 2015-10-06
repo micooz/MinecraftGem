@@ -29,5 +29,3 @@ module.exports = class Tell extends Command {
   }
 
 };
-
-// TODO: implement alias(msg, w) of tell command.

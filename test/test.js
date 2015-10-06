@@ -9,7 +9,7 @@ import Commands from '../src/commands';
 
 const {
   Say,
-  Tell,
+  Tell, Msg, W,
   Spawnpoint,
   Give
   } = Commands;
@@ -68,6 +68,16 @@ testRunner([
         return tell.toString();
       },
       actual: '/tell @a[rm=10,r=40] hi friends'
+    }, {
+      title: 'alias #new Msg(player, msg)',
+      real: () => {
+        const msg = new Msg(
+          new Player(new TargetSelector('a', {radius: [10, 40]})),
+          'hi friends'
+        );
+        return msg.toString();
+      },
+      actual: '/msg @a[rm=10,r=40] hi friends'
     }]
   }, {
     title: 'Spawnpoint Command',
