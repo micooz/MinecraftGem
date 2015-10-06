@@ -1,6 +1,5 @@
 import Command from './command';
-import Player from '../helpers/player';
-import Item from '../helpers/item';
+const {Item, Player} = require('../concepts');
 
 /**
  * Gives an item to a player.

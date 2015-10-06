@@ -1,6 +1,5 @@
 import Command from './command';
-import Player from '../helpers/player';
-import Coordinate from '../helpers/coordinate';
+const {Player, Coordinate} = require('../concepts');
 
 /**
  * /spawnpoint

@@ -1,5 +1,5 @@
 import Command from './command';
-import Player from '../helpers/player';
+const {Player} = require('../concepts');
 
 /**
  * /tell

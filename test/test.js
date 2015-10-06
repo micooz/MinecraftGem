@@ -1,18 +1,18 @@
 import testRunner from './helper';
 
-import TargetSelector from '../src/helpers/target';
-import Coordinate from '../src/helpers/coordinate';
-import Player from '../src/helpers/player';
-import Item from '../src/helpers/item';
-
-import Commands from '../src/commands';
+const {
+  Coordinate,
+  Item,
+  Player,
+  TargetSelector
+  } = require('../src/concepts');
 
 const {
   Say,
   Tell, Msg, W,
   Spawnpoint,
   Give
-  } = Commands;
+  } = require('../src/commands');
 
 testRunner([
   {
