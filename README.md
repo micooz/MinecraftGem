@@ -8,6 +8,10 @@ The aim of the library is to simplify Minecraft Map Makers' work. However, it ju
 
 I hope that someone can use this library to make a web app, providing GUI features for map makers.
 
+## Installation
+
+    $ npm install
+
 ## Features
 
 - [x] Concepts
@@ -120,7 +124,13 @@ To give 64 apples to Mike:
 
 Some other commands are not listed above, I will put them in the specific document.
 
-# Todos / Progress
+## Test
+
+I use `mocha` to do tests, simply run:
+
+    $ npm test
+
+## Todos / Progress
 
 - [ ] [Particles](http://minecraft.gamepedia.com/Particles#Particles)
 - [ ] [Potions](http://minecraft.gamepedia.com/Potions)
@@ -134,6 +144,6 @@ For a long period to come, I will fill in the framework with a lot of data and s
 
 I'll be glad if you send me some PullRequests :)
 
-# License
+## License
 
 MIT
