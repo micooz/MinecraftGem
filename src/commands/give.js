@@ -4,6 +4,7 @@ import Item from '../helpers/item';
 
 /**
  * Gives an item to a player.
+ *
  * Syntax
  *   give <player> <item> [amount] [data] [dataTag]
  *
@@ -14,10 +15,12 @@ import Item from '../helpers/item';
  *   0,
  *   {...}
  * );
+ *
+ * http://minecraft.gamepedia.com/Commands#give
  */
 module.exports = class Give extends Command {
 
-  // TODO: simplify dataTag
+  // TODO: structuring dataTag [NBT Tag]
   constructor(player, item, amount = 1, data = 0, dataTag = {}) {
     super();
     this._name = 'give';

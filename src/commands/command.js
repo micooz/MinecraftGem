@@ -16,7 +16,7 @@ export default class Command {
     if (typeof name == 'string' && typeof options == 'string') {
       return '/' + [name, options].join(' ');
     } else {
-      throw new Error('TypeError when assemble command.');
+      throw new TypeError('when assemble command.');
     }
   }
 

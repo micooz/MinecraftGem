@@ -7,6 +7,8 @@ import Command from './command';
  *   say <message ...>
  *
  * let say = new Say('hi there');
+ *
+ * http://minecraft.gamepedia.com/Commands#say
  */
 module.exports = class Say extends Command {
 
@@ -17,7 +19,7 @@ module.exports = class Say extends Command {
     if (typeof msg == 'string') {
       this._options = msg || '';
     } else {
-      throw new Error('TypeError: msg should be String');
+      throw new TypeError('msg should be String');
     }
   }
 
