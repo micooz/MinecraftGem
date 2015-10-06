@@ -14,16 +14,17 @@ I hope that someone can use this library to make a web app, providing GUI featur
 
 ## Features
 
-- [x] Concepts
-- - [x] Item
-- - [x] TargetSelector
-- - [x] Coordinate
-- - [x] Player
-- [x] Commands
-- - [x] give
-- - [x] tell / msg / w
-- - [x] say
-- - [x] spawnpoint
+* Concepts
+- [x] Item
+- [x] TargetSelector
+- [x] Coordinate
+- [x] Player
+
+* Commands
+- [x] give
+- [x] tell / msg / w
+- [x] say
+- [x] spawnpoint
 
 ## APIs
 
