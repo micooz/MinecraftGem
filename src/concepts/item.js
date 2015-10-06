@@ -3,7 +3,7 @@ import ItemIDs from '../constants/items';
 /**
  * Item
  */
-export default class Item {
+module.exports = class Item {
 
   constructor(name) {
     if (typeof name != 'string' || !name) {
@@ -16,4 +16,4 @@ export default class Item {
     return ItemIDs[this._name];
   }
 
-}
+};

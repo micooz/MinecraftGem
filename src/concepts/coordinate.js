@@ -4,7 +4,7 @@
  * const coordinate = new Coordinate(); // ''
  * const coordinate = new Coordinate(10, 20, 30); // '10 20 30'
  */
-export default class Coordinate {
+module.exports = class Coordinate {
 
   constructor(...args) {
     if (typeof args == 'undefined') {
@@ -25,4 +25,4 @@ export default class Coordinate {
     return this._str;
   }
 
-}
+};

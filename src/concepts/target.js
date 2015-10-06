@@ -20,7 +20,7 @@
  * });
  * http://minecraft.gamepedia.com/Commands#Target_selector_arguments
  */
-export default class TargetSelector {
+module.exports = class TargetSelector {
 
   constructor(variable, args) {
     this._variable = {
@@ -80,4 +80,4 @@ export default class TargetSelector {
     return [this._variable, this._arguments].join('');
   }
 
-}
+};

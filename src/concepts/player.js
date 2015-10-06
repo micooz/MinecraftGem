@@ -9,7 +9,7 @@ import TargetSelector from './target';
  *   radius: [10, 40]
  * }));
  */
-export default class Player {
+module.exports = class Player {
 
   constructor(who) {
     if (who instanceof TargetSelector || typeof who == 'string') {
@@ -24,4 +24,4 @@ export default class Player {
     return (who instanceof TargetSelector) ? who.toString() : who;
   }
 
-}
+};
