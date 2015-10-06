@@ -1,4 +1,5 @@
 import Command from './command';
+import Helper from '../helpers';
 const {Item, Player} = require('../concepts');
 
 /**
@@ -37,7 +38,7 @@ module.exports = class Give extends Command {
       item.toString(),
       amount.toString(),
       data.toString(),
-      JSON.stringify(dataTag).replace(/"(\w+)":/g, '$1:')
+      Helper.toDataTag(dataTag)
     ].join(' ');
   }
 
