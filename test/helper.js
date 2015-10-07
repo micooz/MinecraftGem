@@ -11,8 +11,10 @@ module.exports = function runTests(testCases) {
           const method = methods[k];
           describe(method.title, () => {
             if (method.hasOwnProperty('actual') && method.hasOwnProperty('real')) {
-              it(`should return ${method.actual}`, () => {
-                assert.equal(method.real(), method.actual);
+              const ac = method.actual;
+              const actual = (typeof ac == 'function') ? ac() : ac;
+              it(`should return ${actual}`, () => {
+                assert.equal(method.real(), actual);
               })
             } else if (method.hasOwnProperty('err')) {
               it('should throw an error', () => {
