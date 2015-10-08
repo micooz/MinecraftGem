@@ -1,6 +1,6 @@
 const {
   TargetSelector
-  } = require('../src/concepts');
+  } = require('../lib').concepts;
 
 module.exports = [{
   title: 'Target Selector',

@@ -3,14 +3,14 @@ const {
   Tell, Msg, W,
   Spawnpoint,
   Give
-  } = require('../src/commands');
+  } = require('../lib').commands;
 
 const {
   Coordinate,
   Item,
   Player,
   TargetSelector
-  } = require('../src/concepts');
+  } = require('../lib').concepts;
 
 module.exports = [{
   title: 'Say Command',
