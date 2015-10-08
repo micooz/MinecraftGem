@@ -1,10 +1,13 @@
+/** @module concepts */
+
 /**
  * The target selector
  *
- * let target = new Target('p');
+ * @example
+ * const target = new TargetSelector('p');
  * target.toString(); // @p
  *
- * let targetWithArgs = new Target('p', {
+ * const targetWithArgs = new TargetSelector('p', {
  *   coordinate: [x, y, z],
  *   radius: [min, max],
  *   gamemode: Gamemode.ALL,
@@ -18,10 +21,16 @@
  *   horizontal: [min, max],
  *   type: 'Creeper'
  * });
+ *
+ * @see
  * http://minecraft.gamepedia.com/Commands#Target_selector_arguments
  */
-module.exports = class TargetSelector {
+export default class TargetSelector {
 
+  /**
+   * @param {string} variable can be 'p', 'r', 'a', 'e'.
+   * @param {object} args the options for variable.
+   */
   constructor(variable, args) {
     this._variable = {
       'p': '@p', // nearest player
@@ -76,8 +85,12 @@ module.exports = class TargetSelector {
     return `[${str}]`;
   }
 
+  /**
+   * return assembled string.
+   * @returns {string}
+   */
   toString() {
     return [this._variable, this._arguments].join('');
   }
 
-};
+}

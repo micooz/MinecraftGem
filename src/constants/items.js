@@ -1,5 +1,9 @@
+/** @module constants */
+
 /**
- * define all item IDs
+ * Represents all item IDs.
+ *
+ * @see
  * http://minecraft.gamepedia.com/Data_values#Item_IDs
  */
 let items = {};
@@ -9,4 +13,4 @@ let items = {};
     items[key] = `minecraft:${key}`;
   });
 
-module.exports = items;
+export default items;

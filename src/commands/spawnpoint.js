@@ -1,22 +1,25 @@
+/** @module commands */
+
 import Command from './command';
 const {Player, Coordinate} = require('../concepts');
 
 /**
- * /spawnpoint
- *   Sets the spawn point for a player.
- * Syntax
- *   spawnpoint
- *   spawnpoint <player>
- *   spawnpoint <player> <x> <y> <z>
+ * Sets the spawn point for a player.
  *
- * let spawnpoint = new Spawnpoint(
+ * @example
+ * const spawnpoint = new Spawnpoint(
  *   new Player('Mike'),
  *   new Coordinate(10, 20, 30) // optional
  * );
- *
+ * @see
+ * http://minecraft.gamepedia.com/Commands#spawnpoint
  */
-module.exports = class Spawnpoint extends Command {
+export default class Spawnpoint extends Command {
 
+  /**
+   * @param {Player} player
+   * @param {Coordinate} coordinate
+   */
   constructor(player, coordinate) {
     super();
 
@@ -35,4 +38,4 @@ module.exports = class Spawnpoint extends Command {
     this._options = [player.toString(), coordinate.toString()].join(' ');
   }
 
-};
+}

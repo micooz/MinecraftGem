@@ -1,11 +1,18 @@
+/** @module concepts */
+
 /**
- * Coordinate
+ * Represents a coordinate composed by X, Y, Z.
  *
+ * @example
  * const coordinate = new Coordinate(); // ''
  * const coordinate = new Coordinate(10, 20, 30); // '10 20 30'
  */
-module.exports = class Coordinate {
+export default class Coordinate {
 
+  /**
+   * @param {...} args [X, Y, Z]
+   * @throws {Error} throw error when arg.length !==3.
+   */
   constructor(...args) {
     if (typeof args == 'undefined') {
       this._str = '';
@@ -21,8 +28,12 @@ module.exports = class Coordinate {
     this._str = `${x} ${y} ${z}`;
   }
 
+  /**
+   * return assembled string
+   * @returns {string}
+   */
   toString() {
     return this._str;
   }
 
-};
+}

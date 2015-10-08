@@ -1,18 +1,21 @@
+/** @module commands */
+
 import Command from './command';
 const {Player} = require('../concepts');
 
 /**
- * /tell
- *   Sends a private message to one or more players.
- * Syntax
- *   tell <player> <message ...>
- *   msg <player> <message ...>
- *   w <player> <message ...>
+ * Sends a private message to one or more players.
  *
- * let tell = new Tell(new Player('Mike'), 'hi there');
+ * @example
+ * const tell = new Tell(new Player('Mike'), 'hi there');
  */
-module.exports = class Tell extends Command {
+export default class Tell extends Command {
 
+  /**
+   * @param {Player} player
+   * @param {string} msg
+   * @throw {TypeError} throw error when params type mismatch.
+   */
   constructor(player, msg) {
     super();
     this._name = 'tell';
@@ -28,4 +31,4 @@ module.exports = class Tell extends Command {
     this._options = [player.toString(), msg].join(' ');
   }
 
-};
+}

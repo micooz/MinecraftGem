@@ -1,13 +1,12 @@
+/** @module commands */
+
 import Command from './command';
 import Helper from '../helpers';
 const {Item, Player} = require('../concepts');
 
 /**
  * Gives an item to a player.
- *
- * Syntax
- *   give <player> <item> [amount] [data] [dataTag]
- *
+ * @example
  * let give = new Give(
  *   new Player('Mike'),
  *   new Item('apple'),
@@ -15,12 +14,17 @@ const {Item, Player} = require('../concepts');
  *   0,
  *   {...}
  * );
- *
- * http://minecraft.gamepedia.com/Commands#give
+ * @see http://minecraft.gamepedia.com/Commands#give
  */
-module.exports = class Give extends Command {
+export default class Give extends Command {
 
-  // TODO: structuring dataTag [NBT Tag]
+  /**
+   * @param {Player} player
+   * @param {Item} item
+   * @param {Number} amount
+   * @param {Number} data
+   * @param {Object} dataTag
+   */
   constructor(player, item, amount = 1, data = 0, dataTag = {}) {
     super();
     this._name = 'give';
@@ -42,4 +46,4 @@ module.exports = class Give extends Command {
     ].join(' ');
   }
 
-};
+}

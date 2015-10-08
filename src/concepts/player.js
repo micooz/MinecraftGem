@@ -1,16 +1,22 @@
+/** @module concepts */
+
 import TargetSelector from './target';
 
 /**
- * Player
- *   Which can be a target selector or a plain string.
+ * Represents a player which can be a target selector or a plain string.
  *
- * let player = new Player('Mike');
- * let player = new Player(new TargetSelector('p', {
+ * @example
+ * const player = new Player('Mike');
+ * const player = new Player(new TargetSelector('p', {
  *   radius: [10, 40]
  * }));
  */
-module.exports = class Player {
+export default class Player {
 
+  /**
+   * @param {TargetSelector|string} who
+   * @throw {TypeError} when type mismatch.
+   */
   constructor(who) {
     if (who instanceof TargetSelector || typeof who == 'string') {
       this._who = who;
@@ -19,9 +25,14 @@ module.exports = class Player {
     }
   }
 
+  /**
+   * return assembled string.
+   *
+   * @returns {string}
+   */
   toString() {
     const who = this._who;
     return (who instanceof TargetSelector) ? who.toString() : who;
   }
 
-};
+}

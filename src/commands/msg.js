@@ -1,13 +1,22 @@
+/** @module commands */
+
 import Tell from './tell';
 
 /**
- * Alias of Tell command
+ * Alias of Tell command.
+ *
+ * @example
+ * const msg = new Msg('Mike', 'Hello');
  */
-module.exports = class Msg extends Tell {
+export default class Msg extends Tell {
 
+  /**
+   * @param {Player} player
+   * @param {string} msg
+   */
   constructor(player, msg) {
     super(player, msg);
     this._name = 'msg';
   }
 
-};
+}

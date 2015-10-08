@@ -1,17 +1,21 @@
+/** @module commands */
+
 import Command from './command';
 
 /**
- * /say
- *   Sends a message in the chat to other players.
- * Syntax
- *   say <message ...>
+ * Sends a message in the chat to other players.
  *
- * let say = new Say('hi there');
+ * @example
+ * const say = new Say('hi there');
  *
+ * @see
  * http://minecraft.gamepedia.com/Commands#say
  */
-module.exports = class Say extends Command {
+export default class Say extends Command {
 
+  /**
+   * @param {string} msg
+   */
   constructor(msg) {
     super();
     this._name = 'say';
@@ -23,5 +27,4 @@ module.exports = class Say extends Command {
     }
   }
 
-};
-
+}
