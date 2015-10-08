@@ -1,0 +1,1438 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "entities",
+            "range": [
+              147,
+              155
+            ],
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 4
+              },
+              "end": {
+                "line": 8,
+                "column": 12
+              }
+            }
+          },
+          "init": {
+            "type": "ArrayExpression",
+            "elements": [
+              {
+                "type": "Literal",
+                "value": "Item",
+                "raw": "\"Item\"",
+                "range": [
+                  161,
+                  167
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 3
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 9
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "XPOrb",
+                "raw": "\"XPOrb\"",
+                "range": [
+                  169,
+                  176
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 18
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "LeashKnot",
+                "raw": "\"LeashKnot\"",
+                "range": [
+                  178,
+                  189
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 20
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 31
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Painting",
+                "raw": "\"Painting\"",
+                "range": [
+                  191,
+                  201
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 33
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 43
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ItemFrame",
+                "raw": "\"ItemFrame\"",
+                "range": [
+                  203,
+                  214
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 45
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 56
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ArmorStand",
+                "raw": "\"ArmorStand\"",
+                "range": [
+                  216,
+                  228
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 58
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 70
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "EnderCrystal",
+                "raw": "\"EnderCrystal\"",
+                "range": [
+                  230,
+                  244
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 72
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 86
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ThrownEgg",
+                "raw": "\"ThrownEgg\"",
+                "range": [
+                  246,
+                  257
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 88
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 99
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Arrow",
+                "raw": "\"Arrow\"",
+                "range": [
+                  259,
+                  266
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 101
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 108
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Snowball",
+                "raw": "\"Snowball\"",
+                "range": [
+                  268,
+                  278
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 110
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 120
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Fireball",
+                "raw": "\"Fireball\"",
+                "range": [
+                  280,
+                  290
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 122
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 132
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ThrownEnderpearl",
+                "raw": "\"ThrownEnderpearl\"",
+                "range": [
+                  292,
+                  310
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 134
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 152
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "EyeOfEnderSignal",
+                "raw": "\"EyeOfEnderSignal\"",
+                "range": [
+                  312,
+                  330
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 154
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 172
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ThrownPotion",
+                "raw": "\"ThrownPotion\"",
+                "range": [
+                  332,
+                  346
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 174
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 188
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ThrownExpBottle",
+                "raw": "\"ThrownExpBottle\"",
+                "range": [
+                  348,
+                  365
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 190
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 207
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "WitherSkull",
+                "raw": "\"WitherSkull\"",
+                "range": [
+                  367,
+                  380
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 209
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 222
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "FireworksRocketEntity",
+                "raw": "\"FireworksRocketEntity\"",
+                "range": [
+                  382,
+                  405
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 224
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 247
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "PrimedTnt",
+                "raw": "\"PrimedTnt\"",
+                "range": [
+                  407,
+                  418
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 249
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 260
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "FallingSand",
+                "raw": "\"FallingSand\"",
+                "range": [
+                  420,
+                  433
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 262
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 275
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartCommandBlock",
+                "raw": "\"MinecartCommandBlock\"",
+                "range": [
+                  435,
+                  457
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 277
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 299
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Boat",
+                "raw": "\"Boat\"",
+                "range": [
+                  459,
+                  465
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 301
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 307
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartRideable",
+                "raw": "\"MinecartRideable\"",
+                "range": [
+                  467,
+                  485
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 309
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 327
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartChest",
+                "raw": "\"MinecartChest\"",
+                "range": [
+                  487,
+                  502
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 329
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 344
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartFurnace",
+                "raw": "\"MinecartFurnace\"",
+                "range": [
+                  504,
+                  521
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 346
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 363
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartTNT",
+                "raw": "\"MinecartTNT\"",
+                "range": [
+                  523,
+                  536
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 365
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 378
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartHopper",
+                "raw": "\"MinecartHopper\"",
+                "range": [
+                  538,
+                  554
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 380
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 396
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MinecartSpawner",
+                "raw": "\"MinecartSpawner\"",
+                "range": [
+                  556,
+                  573
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 398
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 415
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Mob",
+                "raw": "\"Mob\"",
+                "range": [
+                  575,
+                  580
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 417
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 422
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Monster",
+                "raw": "\"Monster\"",
+                "range": [
+                  582,
+                  591
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 424
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 433
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Creeper",
+                "raw": "\"Creeper\"",
+                "range": [
+                  593,
+                  602
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 435
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 444
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Skeleton",
+                "raw": "\"Skeleton\"",
+                "range": [
+                  604,
+                  614
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 446
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 456
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Spider",
+                "raw": "\"Spider\"",
+                "range": [
+                  616,
+                  624
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 458
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 466
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Giant",
+                "raw": "\"Giant\"",
+                "range": [
+                  626,
+                  633
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 468
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 475
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Zombie",
+                "raw": "\"Zombie\"",
+                "range": [
+                  635,
+                  643
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 477
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 485
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Slime",
+                "raw": "\"Slime\"",
+                "range": [
+                  645,
+                  652
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 487
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 494
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Ghast",
+                "raw": "\"Ghast\"",
+                "range": [
+                  654,
+                  661
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 496
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 503
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "PigZombie",
+                "raw": "\"PigZombie\"",
+                "range": [
+                  663,
+                  674
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 505
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 516
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Enderman",
+                "raw": "\"Enderman\"",
+                "range": [
+                  676,
+                  686
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 518
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 528
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "CaveSpider",
+                "raw": "\"CaveSpider\"",
+                "range": [
+                  688,
+                  700
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 530
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 542
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Silverfish",
+                "raw": "\"Silverfish\"",
+                "range": [
+                  702,
+                  714
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 544
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 556
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Blaze",
+                "raw": "\"Blaze\"",
+                "range": [
+                  716,
+                  723
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 558
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 565
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "LavaSlime",
+                "raw": "\"LavaSlime\"",
+                "range": [
+                  725,
+                  736
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 567
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 578
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "EnderDragon",
+                "raw": "\"EnderDragon\"",
+                "range": [
+                  738,
+                  751
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 580
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 593
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "WitherBoss",
+                "raw": "\"WitherBoss\"",
+                "range": [
+                  753,
+                  765
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 595
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 607
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Witch",
+                "raw": "\"Witch\"",
+                "range": [
+                  767,
+                  774
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 609
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 616
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Endermite",
+                "raw": "\"Endermite\"",
+                "range": [
+                  776,
+                  787
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 618
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 629
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Guardian",
+                "raw": "\"Guardian\"",
+                "range": [
+                  789,
+                  799
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 631
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 641
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Shulker",
+                "raw": "\"Shulker\"",
+                "range": [
+                  801,
+                  810
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 643
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 652
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Rabbit",
+                "raw": "\"Rabbit\"",
+                "range": [
+                  812,
+                  820
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 654
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 662
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Bat",
+                "raw": "\"Bat\"",
+                "range": [
+                  822,
+                  827
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 664
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 669
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Pig",
+                "raw": "\"Pig\"",
+                "range": [
+                  829,
+                  834
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 671
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 676
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Sheep",
+                "raw": "\"Sheep\"",
+                "range": [
+                  836,
+                  843
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 678
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 685
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Cow",
+                "raw": "\"Cow\"",
+                "range": [
+                  845,
+                  850
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 687
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 692
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Chicken",
+                "raw": "\"Chicken\"",
+                "range": [
+                  852,
+                  861
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 694
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 703
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Squid",
+                "raw": "\"Squid\"",
+                "range": [
+                  863,
+                  870
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 705
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 712
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Wolf",
+                "raw": "\"Wolf\"",
+                "range": [
+                  872,
+                  878
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 714
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 720
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "MushroomCow",
+                "raw": "\"MushroomCow\"",
+                "range": [
+                  880,
+                  893
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 722
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 735
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "SnowMan",
+                "raw": "\"SnowMan\"",
+                "range": [
+                  895,
+                  904
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 737
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 746
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Ozelot",
+                "raw": "\"Ozelot\"",
+                "range": [
+                  906,
+                  914
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 748
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 756
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "VillagerGolem",
+                "raw": "\"VillagerGolem\"",
+                "range": [
+                  916,
+                  931
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 758
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 773
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "EntityHorse",
+                "raw": "\"EntityHorse\"",
+                "range": [
+                  933,
+                  946
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 775
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 788
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Rabbit",
+                "raw": "\"Rabbit\"",
+                "range": [
+                  948,
+                  956
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 790
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 798
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "Villager",
+                "raw": "\"Villager\"",
+                "range": [
+                  958,
+                  968
+                ],
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 800
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 810
+                  }
+                }
+              }
+            ],
+            "range": [
+              160,
+              969
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 2
+              },
+              "end": {
+                "line": 9,
+                "column": 811
+              }
+            }
+          },
+          "range": [
+            147,
+            969
+          ],
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 4
+            },
+            "end": {
+              "line": 9,
+              "column": 811
+            }
+          }
+        }
+      ],
+      "kind": "let",
+      "range": [
+        143,
+        970
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 812
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * define all entities IDs\n * http://minecraft.gamepedia.com/Data_values#Entity_IDs\n *\n * summon <EntityName> [x] [y] [z] [dataTag]\n *\n ",
+          "range": [
+            0,
+            142
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "module",
+            "range": [
+              972,
+              978
+            ],
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 6
+              }
+            }
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "exports",
+            "range": [
+              979,
+              986
+            ],
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 7
+              },
+              "end": {
+                "line": 11,
+                "column": 14
+              }
+            }
+          },
+          "range": [
+            972,
+            986
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 14
+            }
+          }
+        },
+        "right": {
+          "type": "Identifier",
+          "name": "entities",
+          "range": [
+            989,
+            997
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 17
+            },
+            "end": {
+              "line": 11,
+              "column": 25
+            }
+          }
+        },
+        "range": [
+          972,
+          997
+        ],
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 0
+          },
+          "end": {
+            "line": 11,
+            "column": 25
+          }
+        }
+      },
+      "range": [
+        972,
+        998
+      ],
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 26
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    143,
+    998
+  ],
+  "loc": {
+    "start": {
+      "line": 8,
+      "column": 0
+    },
+    "end": {
+      "line": 11,
+      "column": 26
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * define all entities IDs\n * http://minecraft.gamepedia.com/Data_values#Entity_IDs\n *\n * summon <EntityName> [x] [y] [z] [dataTag]\n *\n ",
+      "range": [
+        0,
+        142
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

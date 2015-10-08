@@ -1,0 +1,4328 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Identifier",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "items",
+            "range": [
+              132,
+              137
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 4
+              },
+              "end": {
+                "line": 9,
+                "column": 9
+              }
+            }
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "properties": [],
+            "range": [
+              140,
+              142
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 12
+              },
+              "end": {
+                "line": 9,
+                "column": 14
+              }
+            }
+          },
+          "range": [
+            132,
+            142
+          ],
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 4
+            },
+            "end": {
+              "line": 9,
+              "column": 14
+            }
+          }
+        }
+      ],
+      "kind": "let",
+      "range": [
+        128,
+        143
+      ],
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 15
+        }
+      },
+      "leadingComments": [],
+      "name": "_",
+      "trailingComments": []
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "ArrayExpression",
+            "elements": [
+              {
+                "type": "Literal",
+                "value": "iron_shovel",
+                "raw": "\"iron_shovel\"",
+                "range": [
+                  146,
+                  159
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 14
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_pickaxe",
+                "raw": "\"iron_pickaxe\"",
+                "range": [
+                  161,
+                  175
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 16
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 30
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_axe",
+                "raw": "\"iron_axe\"",
+                "range": [
+                  177,
+                  187
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 32
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 42
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "flint_and_steel",
+                "raw": "\"flint_and_steel\"",
+                "range": [
+                  189,
+                  206
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 44
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 61
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "apple",
+                "raw": "\"apple\"",
+                "range": [
+                  208,
+                  215
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 63
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 70
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "bow",
+                "raw": "\"bow\"",
+                "range": [
+                  217,
+                  222
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 72
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 77
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "arrow",
+                "raw": "\"arrow\"",
+                "range": [
+                  224,
+                  231
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 79
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 86
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "coal",
+                "raw": "\"coal\"",
+                "range": [
+                  233,
+                  239
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 88
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 94
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond",
+                "raw": "\"diamond\"",
+                "range": [
+                  241,
+                  250
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 96
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 105
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_ingot",
+                "raw": "\"iron_ingot\"",
+                "range": [
+                  252,
+                  264
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 107
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 119
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "gold_ingot",
+                "raw": "\"gold_ingot\"",
+                "range": [
+                  266,
+                  278
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 121
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 133
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_sword",
+                "raw": "\"iron_sword\"",
+                "range": [
+                  280,
+                  292
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 135
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 147
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_sword",
+                "raw": "\"wooden_sword\"",
+                "range": [
+                  294,
+                  308
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 149
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 163
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_shovel",
+                "raw": "\"wooden_shovel\"",
+                "range": [
+                  310,
+                  325
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 165
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 180
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_pickaxe",
+                "raw": "\"wooden_pickaxe\"",
+                "range": [
+                  327,
+                  343
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 182
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 198
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_axe",
+                "raw": "\"wooden_axe\"",
+                "range": [
+                  345,
+                  357
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 200
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 212
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_sword",
+                "raw": "\"stone_sword\"",
+                "range": [
+                  359,
+                  372
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 214
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 227
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_shovel",
+                "raw": "\"stone_shovel\"",
+                "range": [
+                  374,
+                  388
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 229
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 243
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_pickaxe",
+                "raw": "\"stone_pickaxe\"",
+                "range": [
+                  390,
+                  405
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 245
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 260
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_axe",
+                "raw": "\"stone_axe\"",
+                "range": [
+                  407,
+                  418
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 262
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 273
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_sword",
+                "raw": "\"diamond_sword\"",
+                "range": [
+                  420,
+                  435
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 275
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 290
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_shovel",
+                "raw": "\"diamond_shovel\"",
+                "range": [
+                  437,
+                  453
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 292
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 308
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_pickaxe",
+                "raw": "\"diamond_pickaxe\"",
+                "range": [
+                  455,
+                  472
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 310
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 327
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_axe",
+                "raw": "\"diamond_axe\"",
+                "range": [
+                  474,
+                  487
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 329
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 342
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stick",
+                "raw": "\"stick\"",
+                "range": [
+                  489,
+                  496
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 344
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 351
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "bowl",
+                "raw": "\"bowl\"",
+                "range": [
+                  498,
+                  504
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 353
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 359
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "mushroom_stew",
+                "raw": "\"mushroom_stew\"",
+                "range": [
+                  506,
+                  521
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 361
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 376
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_sword",
+                "raw": "\"golden_sword\"",
+                "range": [
+                  523,
+                  537
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 378
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 392
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_shovel",
+                "raw": "\"golden_shovel\"",
+                "range": [
+                  539,
+                  554
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 394
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 409
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_pickaxe",
+                "raw": "\"golden_pickaxe\"",
+                "range": [
+                  556,
+                  572
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 411
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 427
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_axe",
+                "raw": "\"golden_axe\"",
+                "range": [
+                  574,
+                  586
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 429
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 441
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "string",
+                "raw": "\"string\"",
+                "range": [
+                  588,
+                  596
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 443
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 451
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "feather",
+                "raw": "\"feather\"",
+                "range": [
+                  598,
+                  607
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 453
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 462
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "gunpowder",
+                "raw": "\"gunpowder\"",
+                "range": [
+                  609,
+                  620
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 464
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 475
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_hoe",
+                "raw": "\"wooden_hoe\"",
+                "range": [
+                  622,
+                  634
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 477
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 489
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_hoe",
+                "raw": "\"stone_hoe\"",
+                "range": [
+                  636,
+                  647
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 491
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 502
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_hoe",
+                "raw": "\"iron_hoe\"",
+                "range": [
+                  649,
+                  659
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 504
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 514
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_hoe",
+                "raw": "\"diamond_hoe\"",
+                "range": [
+                  661,
+                  674
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 516
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 529
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_hoe",
+                "raw": "\"golden_hoe\"",
+                "range": [
+                  676,
+                  688
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 531
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 543
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wheat_seeds",
+                "raw": "\"wheat_seeds\"",
+                "range": [
+                  690,
+                  703
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 545
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 558
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wheat",
+                "raw": "\"wheat\"",
+                "range": [
+                  705,
+                  712
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 560
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 567
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "bread",
+                "raw": "\"bread\"",
+                "range": [
+                  714,
+                  721
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 569
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 576
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "leather_helmet",
+                "raw": "\"leather_helmet\"",
+                "range": [
+                  723,
+                  739
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 578
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 594
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "leather_chestplate",
+                "raw": "\"leather_chestplate\"",
+                "range": [
+                  741,
+                  761
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 596
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 616
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "leather_leggings",
+                "raw": "\"leather_leggings\"",
+                "range": [
+                  763,
+                  781
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 618
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 636
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "leather_boots",
+                "raw": "\"leather_boots\"",
+                "range": [
+                  783,
+                  798
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 638
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 653
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chainmail_helmet",
+                "raw": "\"chainmail_helmet\"",
+                "range": [
+                  800,
+                  818
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 655
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 673
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chainmail_chestplate",
+                "raw": "\"chainmail_chestplate\"",
+                "range": [
+                  820,
+                  842
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 675
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 697
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chainmail_leggings",
+                "raw": "\"chainmail_leggings\"",
+                "range": [
+                  844,
+                  864
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 699
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 719
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chainmail_boots",
+                "raw": "\"chainmail_boots\"",
+                "range": [
+                  866,
+                  883
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 721
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 738
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_helmet",
+                "raw": "\"iron_helmet\"",
+                "range": [
+                  885,
+                  898
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 740
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 753
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_chestplate",
+                "raw": "\"iron_chestplate\"",
+                "range": [
+                  900,
+                  917
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 755
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 772
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_leggings",
+                "raw": "\"iron_leggings\"",
+                "range": [
+                  919,
+                  934
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 774
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 789
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_boots",
+                "raw": "\"iron_boots\"",
+                "range": [
+                  936,
+                  948
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 791
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 803
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_helmet",
+                "raw": "\"diamond_helmet\"",
+                "range": [
+                  950,
+                  966
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 805
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 821
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_chestplate",
+                "raw": "\"diamond_chestplate\"",
+                "range": [
+                  968,
+                  988
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 823
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 843
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_leggings",
+                "raw": "\"diamond_leggings\"",
+                "range": [
+                  990,
+                  1008
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 845
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 863
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_boots",
+                "raw": "\"diamond_boots\"",
+                "range": [
+                  1010,
+                  1025
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 865
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 880
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_helmet",
+                "raw": "\"golden_helmet\"",
+                "range": [
+                  1027,
+                  1042
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 882
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 897
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_chestplate",
+                "raw": "\"golden_chestplate\"",
+                "range": [
+                  1044,
+                  1063
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 899
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 918
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_leggings",
+                "raw": "\"golden_leggings\"",
+                "range": [
+                  1065,
+                  1082
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 920
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 937
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_boots",
+                "raw": "\"golden_boots\"",
+                "range": [
+                  1084,
+                  1098
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 939
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 953
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "flint",
+                "raw": "\"flint\"",
+                "range": [
+                  1100,
+                  1107
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 955
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 962
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "porkchop",
+                "raw": "\"porkchop\"",
+                "range": [
+                  1109,
+                  1119
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 964
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 974
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cooked_porkchop",
+                "raw": "\"cooked_porkchop\"",
+                "range": [
+                  1121,
+                  1138
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 976
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 993
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "painting",
+                "raw": "\"painting\"",
+                "range": [
+                  1140,
+                  1150
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 995
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1005
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_apple",
+                "raw": "\"golden_apple\"",
+                "range": [
+                  1152,
+                  1166
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1007
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1021
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "sign",
+                "raw": "\"sign\"",
+                "range": [
+                  1168,
+                  1174
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1023
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1029
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_door",
+                "raw": "\"wooden_door\"",
+                "range": [
+                  1176,
+                  1189
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1031
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1044
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "bucket",
+                "raw": "\"bucket\"",
+                "range": [
+                  1191,
+                  1199
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1046
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1054
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "water_bucket",
+                "raw": "\"water_bucket\"",
+                "range": [
+                  1201,
+                  1215
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1056
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1070
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lava_bucket",
+                "raw": "\"lava_bucket\"",
+                "range": [
+                  1217,
+                  1230
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1072
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1085
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "minecart",
+                "raw": "\"minecart\"",
+                "range": [
+                  1232,
+                  1242
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1087
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1097
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "saddle",
+                "raw": "\"saddle\"",
+                "range": [
+                  1244,
+                  1252
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1099
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1107
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_door",
+                "raw": "\"iron_door\"",
+                "range": [
+                  1254,
+                  1265
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1109
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1120
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "redstone",
+                "raw": "\"redstone\"",
+                "range": [
+                  1267,
+                  1277
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1122
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1132
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "snowball",
+                "raw": "\"snowball\"",
+                "range": [
+                  1279,
+                  1289
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1134
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1144
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "boat",
+                "raw": "\"boat\"",
+                "range": [
+                  1291,
+                  1297
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1146
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1152
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "leather",
+                "raw": "\"leather\"",
+                "range": [
+                  1299,
+                  1308
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1154
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1163
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "milk_bucket",
+                "raw": "\"milk_bucket\"",
+                "range": [
+                  1310,
+                  1323
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1165
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1178
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "brick",
+                "raw": "\"brick\"",
+                "range": [
+                  1325,
+                  1332
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1180
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1187
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "clay_ball",
+                "raw": "\"clay_ball\"",
+                "range": [
+                  1334,
+                  1345
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1189
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1200
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "reeds",
+                "raw": "\"reeds\"",
+                "range": [
+                  1347,
+                  1354
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1202
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1209
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "paper",
+                "raw": "\"paper\"",
+                "range": [
+                  1356,
+                  1363
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1211
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1218
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "book",
+                "raw": "\"book\"",
+                "range": [
+                  1365,
+                  1371
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1220
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1226
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "slime_ball",
+                "raw": "\"slime_ball\"",
+                "range": [
+                  1373,
+                  1385
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1228
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1240
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chest_minecart",
+                "raw": "\"chest_minecart\"",
+                "range": [
+                  1387,
+                  1403
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1242
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1258
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "furnace_minecart",
+                "raw": "\"furnace_minecart\"",
+                "range": [
+                  1405,
+                  1423
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1260
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1278
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "egg",
+                "raw": "\"egg\"",
+                "range": [
+                  1425,
+                  1430
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1280
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1285
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "compass",
+                "raw": "\"compass\"",
+                "range": [
+                  1432,
+                  1441
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1287
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1296
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "fishing_rod",
+                "raw": "\"fishing_rod\"",
+                "range": [
+                  1443,
+                  1456
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1298
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1311
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "clock",
+                "raw": "\"clock\"",
+                "range": [
+                  1458,
+                  1465
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1313
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1320
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "glowstone_dust",
+                "raw": "\"glowstone_dust\"",
+                "range": [
+                  1467,
+                  1483
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1322
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1338
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "fish",
+                "raw": "\"fish\"",
+                "range": [
+                  1485,
+                  1491
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1340
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1346
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cooked_fish",
+                "raw": "\"cooked_fish\"",
+                "range": [
+                  1493,
+                  1506
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1348
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1361
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "dye",
+                "raw": "\"dye\"",
+                "range": [
+                  1508,
+                  1513
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1363
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1368
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "bone",
+                "raw": "\"bone\"",
+                "range": [
+                  1515,
+                  1521
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1370
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1376
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "sugar",
+                "raw": "\"sugar\"",
+                "range": [
+                  1523,
+                  1530
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1378
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1385
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cake",
+                "raw": "\"cake\"",
+                "range": [
+                  1532,
+                  1538
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1387
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1393
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "bed",
+                "raw": "\"bed\"",
+                "range": [
+                  1540,
+                  1545
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1395
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1400
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "repeater",
+                "raw": "\"repeater\"",
+                "range": [
+                  1547,
+                  1557
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1402
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1412
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cookie",
+                "raw": "\"cookie\"",
+                "range": [
+                  1559,
+                  1567
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1414
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1422
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "filled_map",
+                "raw": "\"filled_map\"",
+                "range": [
+                  1569,
+                  1581
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1424
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1436
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "shears",
+                "raw": "\"shears\"",
+                "range": [
+                  1583,
+                  1591
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1438
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1446
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "melon",
+                "raw": "\"melon\"",
+                "range": [
+                  1593,
+                  1600
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1448
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1455
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "pumpkin_seeds",
+                "raw": "\"pumpkin_seeds\"",
+                "range": [
+                  1602,
+                  1617
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1457
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1472
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "melon_seeds",
+                "raw": "\"melon_seeds\"",
+                "range": [
+                  1619,
+                  1632
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1474
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1487
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "beef",
+                "raw": "\"beef\"",
+                "range": [
+                  1634,
+                  1640
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1489
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1495
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cooked_beef",
+                "raw": "\"cooked_beef\"",
+                "range": [
+                  1642,
+                  1655
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1497
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1510
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chicken",
+                "raw": "\"chicken\"",
+                "range": [
+                  1657,
+                  1666
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1512
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1521
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cooked_chicken",
+                "raw": "\"cooked_chicken\"",
+                "range": [
+                  1668,
+                  1684
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1523
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1539
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "rotten_flesh",
+                "raw": "\"rotten_flesh\"",
+                "range": [
+                  1686,
+                  1700
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1541
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1555
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ender_pearl",
+                "raw": "\"ender_pearl\"",
+                "range": [
+                  1702,
+                  1715
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1557
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1570
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "blaze_rod",
+                "raw": "\"blaze_rod\"",
+                "range": [
+                  1717,
+                  1728
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1572
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1583
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ghast_tear",
+                "raw": "\"ghast_tear\"",
+                "range": [
+                  1730,
+                  1742
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1585
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1597
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "gold_nugget",
+                "raw": "\"gold_nugget\"",
+                "range": [
+                  1744,
+                  1757
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1599
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1612
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "nether_wart",
+                "raw": "\"nether_wart\"",
+                "range": [
+                  1759,
+                  1772
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1614
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1627
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "potion",
+                "raw": "\"potion\"",
+                "range": [
+                  1774,
+                  1782
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1629
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1637
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "glass_bottle",
+                "raw": "\"glass_bottle\"",
+                "range": [
+                  1784,
+                  1798
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1639
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1653
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spider_eye",
+                "raw": "\"spider_eye\"",
+                "range": [
+                  1800,
+                  1812
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1655
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1667
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "fermented_spider_eye",
+                "raw": "\"fermented_spider_eye\"",
+                "range": [
+                  1814,
+                  1836
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1669
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1691
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "blaze_powder",
+                "raw": "\"blaze_powder\"",
+                "range": [
+                  1838,
+                  1852
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1693
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1707
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "magma_cream",
+                "raw": "\"magma_cream\"",
+                "range": [
+                  1854,
+                  1867
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1709
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1722
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "brewing_stand",
+                "raw": "\"brewing_stand\"",
+                "range": [
+                  1869,
+                  1884
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1724
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1739
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cauldron",
+                "raw": "\"cauldron\"",
+                "range": [
+                  1886,
+                  1896
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1741
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1751
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "ender_eye",
+                "raw": "\"ender_eye\"",
+                "range": [
+                  1898,
+                  1909
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1753
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1764
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "speckled_melon",
+                "raw": "\"speckled_melon\"",
+                "range": [
+                  1911,
+                  1927
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1766
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1782
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spawn_egg",
+                "raw": "\"spawn_egg\"",
+                "range": [
+                  1929,
+                  1940
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1784
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1795
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "experience_bottle",
+                "raw": "\"experience_bottle\"",
+                "range": [
+                  1942,
+                  1961
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1797
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1816
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "fire_charge",
+                "raw": "\"fire_charge\"",
+                "range": [
+                  1963,
+                  1976
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1818
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1831
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "writable_book",
+                "raw": "\"writable_book\"",
+                "range": [
+                  1978,
+                  1993
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1833
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1848
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "written_book",
+                "raw": "\"written_book\"",
+                "range": [
+                  1995,
+                  2009
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1850
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1864
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "emerald",
+                "raw": "\"emerald\"",
+                "range": [
+                  2011,
+                  2020
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1866
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1875
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "item_frame",
+                "raw": "\"item_frame\"",
+                "range": [
+                  2022,
+                  2034
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1877
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1889
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "flower_pot",
+                "raw": "\"flower_pot\"",
+                "range": [
+                  2036,
+                  2048
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1891
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1903
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "carrot",
+                "raw": "\"carrot\"",
+                "range": [
+                  2050,
+                  2058
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1905
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1913
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "potato",
+                "raw": "\"potato\"",
+                "range": [
+                  2060,
+                  2068
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1915
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1923
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "baked_potato",
+                "raw": "\"baked_potato\"",
+                "range": [
+                  2070,
+                  2084
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1925
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1939
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "poisonous_potato",
+                "raw": "\"poisonous_potato\"",
+                "range": [
+                  2086,
+                  2104
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1941
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1959
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "map",
+                "raw": "\"map\"",
+                "range": [
+                  2106,
+                  2111
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1961
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1966
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_carrot",
+                "raw": "\"golden_carrot\"",
+                "range": [
+                  2113,
+                  2128
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1968
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1983
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "skull",
+                "raw": "\"skull\"",
+                "range": [
+                  2130,
+                  2137
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1985
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1992
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "carrot_on_a_stick",
+                "raw": "\"carrot_on_a_stick\"",
+                "range": [
+                  2139,
+                  2158
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 1994
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2013
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "nether_star",
+                "raw": "\"nether_star\"",
+                "range": [
+                  2160,
+                  2173
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2015
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2028
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "pumpkin_pie",
+                "raw": "\"pumpkin_pie\"",
+                "range": [
+                  2175,
+                  2188
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2030
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2043
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "fireworks",
+                "raw": "\"fireworks\"",
+                "range": [
+                  2190,
+                  2201
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2045
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2056
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "firework_charge",
+                "raw": "\"firework_charge\"",
+                "range": [
+                  2203,
+                  2220
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2058
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2075
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "enchanted_book",
+                "raw": "\"enchanted_book\"",
+                "range": [
+                  2222,
+                  2238
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2077
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2093
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "comparator",
+                "raw": "\"comparator\"",
+                "range": [
+                  2240,
+                  2252
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2095
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2107
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "netherbrick",
+                "raw": "\"netherbrick\"",
+                "range": [
+                  2254,
+                  2267
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2109
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2122
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "quartz",
+                "raw": "\"quartz\"",
+                "range": [
+                  2269,
+                  2277
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2124
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2132
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "tnt_minecart",
+                "raw": "\"tnt_minecart\"",
+                "range": [
+                  2279,
+                  2293
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2134
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2148
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "hopper_minecart",
+                "raw": "\"hopper_minecart\"",
+                "range": [
+                  2295,
+                  2312
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2150
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2167
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "prismarine_shard",
+                "raw": "\"prismarine_shard\"",
+                "range": [
+                  2314,
+                  2332
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2169
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2187
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "prismarine_crystals",
+                "raw": "\"prismarine_crystals\"",
+                "range": [
+                  2334,
+                  2355
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2189
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2210
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "rabbit",
+                "raw": "\"rabbit\"",
+                "range": [
+                  2357,
+                  2365
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2212
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2220
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cooked_rabbit",
+                "raw": "\"cooked_rabbit\"",
+                "range": [
+                  2367,
+                  2382
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2222
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2237
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "rabbit_stew",
+                "raw": "\"rabbit_stew\"",
+                "range": [
+                  2384,
+                  2397
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2239
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2252
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "rabbit_foot",
+                "raw": "\"rabbit_foot\"",
+                "range": [
+                  2399,
+                  2412
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2254
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2267
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "rabbit_hide",
+                "raw": "\"rabbit_hide\"",
+                "range": [
+                  2414,
+                  2427
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2269
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2282
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "armor_stand",
+                "raw": "\"armor_stand\"",
+                "range": [
+                  2429,
+                  2442
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2284
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2297
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_horse_armor",
+                "raw": "\"iron_horse_armor\"",
+                "range": [
+                  2444,
+                  2462
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2299
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2317
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_horse_armor",
+                "raw": "\"golden_horse_armor\"",
+                "range": [
+                  2464,
+                  2484
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2319
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2339
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_horse_armor",
+                "raw": "\"diamond_horse_armor\"",
+                "range": [
+                  2486,
+                  2507
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2341
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2362
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lead",
+                "raw": "\"lead\"",
+                "range": [
+                  2509,
+                  2515
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2364
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2370
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "name_tag",
+                "raw": "\"name_tag\"",
+                "range": [
+                  2517,
+                  2527
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2372
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2382
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "command_block_minecart",
+                "raw": "\"command_block_minecart\"",
+                "range": [
+                  2529,
+                  2553
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2384
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2408
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "mutton",
+                "raw": "\"mutton\"",
+                "range": [
+                  2555,
+                  2563
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2410
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2418
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "cooked_mutton",
+                "raw": "\"cooked_mutton\"",
+                "range": [
+                  2565,
+                  2580
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2420
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2435
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "banner",
+                "raw": "\"banner\"",
+                "range": [
+                  2582,
+                  2590
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2437
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2445
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spruce_door",
+                "raw": "\"spruce_door\"",
+                "range": [
+                  2592,
+                  2605
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2447
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2460
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "birch_door",
+                "raw": "\"birch_door\"",
+                "range": [
+                  2607,
+                  2619
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2462
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2474
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "jungle_door",
+                "raw": "\"jungle_door\"",
+                "range": [
+                  2621,
+                  2634
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2476
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2489
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "acacia_door",
+                "raw": "\"acacia_door\"",
+                "range": [
+                  2636,
+                  2649
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2491
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2504
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "dark_oak_door",
+                "raw": "\"dark_oak_door\"",
+                "range": [
+                  2651,
+                  2666
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2506
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2521
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "chorus_fruit",
+                "raw": "\"chorus_fruit\"",
+                "range": [
+                  2668,
+                  2682
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2523
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2537
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "popped_chorus_fruit",
+                "raw": "\"popped_chorus_fruit\"",
+                "range": [
+                  2684,
+                  2705
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2539
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2560
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "beetroot",
+                "raw": "\"beetroot\"",
+                "range": [
+                  2707,
+                  2717
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2562
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2572
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "beetroot_seeds",
+                "raw": "\"beetroot_seeds\"",
+                "range": [
+                  2719,
+                  2735
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2574
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2590
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "beetroot_soup",
+                "raw": "\"beetroot_soup\"",
+                "range": [
+                  2737,
+                  2752
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2592
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2607
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "splash_potion",
+                "raw": "\"splash_potion\"",
+                "range": [
+                  2754,
+                  2769
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2609
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2624
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spectral_arrow",
+                "raw": "\"spectral_arrow\"",
+                "range": [
+                  2771,
+                  2787
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2626
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2642
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "tipped_arrow",
+                "raw": "\"tipped_arrow\"",
+                "range": [
+                  2789,
+                  2803
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2644
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2658
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lingering_potion",
+                "raw": "\"lingering_potion\"",
+                "range": [
+                  2805,
+                  2823
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2660
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2678
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "shield",
+                "raw": "\"shield\"",
+                "range": [
+                  2825,
+                  2833
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2680
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2688
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_cat",
+                "raw": "\"record_cat\"",
+                "range": [
+                  2835,
+                  2847
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2690
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2702
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_blocks",
+                "raw": "\"record_blocks\"",
+                "range": [
+                  2849,
+                  2864
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2704
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2719
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_chirp",
+                "raw": "\"record_chirp\"",
+                "range": [
+                  2866,
+                  2880
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2721
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2735
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_far",
+                "raw": "\"record_far\"",
+                "range": [
+                  2882,
+                  2894
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2737
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2749
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_mall",
+                "raw": "\"record_mall\"",
+                "range": [
+                  2896,
+                  2909
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2751
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2764
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_mellohi",
+                "raw": "\"record_mellohi\"",
+                "range": [
+                  2911,
+                  2927
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2766
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2782
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_stal",
+                "raw": "\"record_stal\"",
+                "range": [
+                  2929,
+                  2942
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2784
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2797
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_strad",
+                "raw": "\"record_strad\"",
+                "range": [
+                  2944,
+                  2958
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2799
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2813
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_ward",
+                "raw": "\"record_ward\"",
+                "range": [
+                  2960,
+                  2973
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2815
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2828
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "record_wait",
+                "raw": "\"record_wait\"",
+                "range": [
+                  2975,
+                  2988
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2830
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 2843
+                  }
+                }
+              }
+            ],
+            "range": [
+              145,
+              2989
+            ],
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 2844
+              }
+            }
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "forEach",
+            "range": [
+              2993,
+              3000
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 3
+              },
+              "end": {
+                "line": 12,
+                "column": 10
+              }
+            }
+          },
+          "range": [
+            145,
+            3000
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 12,
+              "column": 10
+            }
+          }
+        },
+        "arguments": [
+          {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "key",
+                "range": [
+                  3011,
+                  3014
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 21
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 24
+                  }
+                }
+              }
+            ],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "MemberExpression",
+                      "computed": true,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "items",
+                        "range": [
+                          3022,
+                          3027
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 9
+                          }
+                        }
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "key",
+                        "range": [
+                          3028,
+                          3031
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 10
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "range": [
+                        3022,
+                        3032
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 14
+                        }
+                      }
+                    },
+                    "right": {
+                      "type": "TemplateLiteral",
+                      "quasis": [
+                        {
+                          "type": "TemplateElement",
+                          "value": {
+                            "raw": "minecraft:",
+                            "cooked": "minecraft:"
+                          },
+                          "tail": false,
+                          "range": [
+                            3035,
+                            3048
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 13,
+                              "column": 30
+                            }
+                          }
+                        },
+                        {
+                          "type": "TemplateElement",
+                          "value": {
+                            "raw": "",
+                            "cooked": ""
+                          },
+                          "tail": true,
+                          "range": [
+                            3051,
+                            3053
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 33
+                            },
+                            "end": {
+                              "line": 13,
+                              "column": 35
+                            }
+                          }
+                        }
+                      ],
+                      "expressions": [
+                        {
+                          "type": "Identifier",
+                          "name": "key",
+                          "range": [
+                            3048,
+                            3051
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 30
+                            },
+                            "end": {
+                              "line": 13,
+                              "column": 33
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        3035,
+                        3053
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 17
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 35
+                        }
+                      }
+                    },
+                    "range": [
+                      3022,
+                      3053
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 35
+                      }
+                    }
+                  },
+                  "range": [
+                    3022,
+                    3054
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 13,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 36
+                    }
+                  }
+                }
+              ],
+              "range": [
+                3016,
+                3058
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 26
+                },
+                "end": {
+                  "line": 14,
+                  "column": 3
+                }
+              }
+            },
+            "generator": false,
+            "expression": false,
+            "range": [
+              3001,
+              3058
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 11
+              },
+              "end": {
+                "line": 14,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "range": [
+          145,
+          3059
+        ],
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 0
+          },
+          "end": {
+            "line": 14,
+            "column": 4
+          }
+        }
+      },
+      "range": [
+        145,
+        3060
+      ],
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Identifier",
+      "declaration": {
+        "type": "Identifier",
+        "name": "items",
+        "range": [
+          3077,
+          3082
+        ],
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 15
+          },
+          "end": {
+            "line": 16,
+            "column": 20
+          }
+        }
+      },
+      "range": [
+        3062,
+        3083
+      ],
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 21
+        }
+      },
+      "name": "_",
+      "leadingComments": [],
+      "trailingComments": []
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "items",
+              "range": [
+                132,
+                137
+              ],
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 4
+                },
+                "end": {
+                  "line": 9,
+                  "column": 9
+                }
+              }
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [],
+              "range": [
+                140,
+                142
+              ],
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 12
+                },
+                "end": {
+                  "line": 9,
+                  "column": 14
+                }
+              }
+            },
+            "range": [
+              132,
+              142
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 4
+              },
+              "end": {
+                "line": 9,
+                "column": 14
+              }
+            }
+          }
+        ],
+        "kind": "let",
+        "range": [
+          128,
+          143
+        ],
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 15
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "* @module constants ",
+            "range": [
+              0,
+              24
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 24
+              }
+            }
+          },
+          {
+            "type": "Block",
+            "value": "*\n * Represents all item IDs.\n *\n * @see\n * http://minecraft.gamepedia.com/Data_values#Item_IDs\n ",
+            "range": [
+              26,
+              127
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 8,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        3062,
+        3083
+      ],
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 21
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    128,
+    3083
+  ],
+  "loc": {
+    "start": {
+      "line": 9,
+      "column": 0
+    },
+    "end": {
+      "line": 16,
+      "column": 21
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "* @module constants ",
+      "range": [
+        0,
+        24
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Represents all item IDs.\n *\n * @see\n * http://minecraft.gamepedia.com/Data_values#Item_IDs\n ",
+      "range": [
+        26,
+        127
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

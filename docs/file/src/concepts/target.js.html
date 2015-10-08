@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/concepts/target.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/micooz/MinecraftGem" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">commands</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/command.js~Command.html">Command</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/give.js~Give.html">Give</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/msg.js~Msg.html">Msg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/say.js~Say.html">Say</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/spawnpoint.js~Spawnpoint.html">Spawnpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/tell.js~Tell.html">Tell</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/w.js~W.html">W</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">concepts</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/coordinate.js~Coordinate.html">Coordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/target.js~TargetSelector.html">TargetSelector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-items">items</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toDataTag">toDataTag</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/concepts/target.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/** @module concepts */
+
+/**
+ * The target selector
+ *
+ * @example
+ * const target = new TargetSelector(&apos;p&apos;);
+ * target.toString(); // @p
+ *
+ * const targetWithArgs = new TargetSelector(&apos;p&apos;, {
+ *   coordinate: [x, y, z],
+ *   radius: [min, max],
+ *   gamemode: Gamemode.ALL,
+ *   count: 3,
+ *   level: [min, max],
+ *   score: [min, max],
+ *   team: &apos;Red&apos;,
+ *   name: &apos;name&apos;,
+ *   volume: [dx, dy, dz],
+ *   vertical: [min, max],
+ *   horizontal: [min, max],
+ *   type: &apos;Creeper&apos;
+ * });
+ *
+ * @see
+ * http://minecraft.gamepedia.com/Commands#Target_selector_arguments
+ */
+export default class TargetSelector {
+
+  /**
+   * @param {string} variable can be &apos;p&apos;, &apos;r&apos;, &apos;a&apos;, &apos;e&apos;.
+   * @param {object} args the options for variable.
+   */
+  constructor(variable, args) {
+    this._variable = {
+      &apos;p&apos;: &apos;@p&apos;, // nearest player
+      &apos;r&apos;: &apos;@r&apos;, // random player
+      &apos;a&apos;: &apos;@a&apos;, // all players
+      &apos;e&apos;: &apos;@e&apos; // all entities
+    }[variable || &apos;p&apos;];
+    this._arguments = this._getArgsString(args);
+  }
+
+  _getArgsString(args) {
+    if (typeof args == &apos;undefined&apos;) {
+      return &apos;&apos;;
+    }
+    let str = &apos;&apos;;
+    for (let key in args) {
+      let value = args[key], arr = [];
+      switch (key) {
+        case &apos;coordinate&apos;:
+          if (value instanceof Array) {
+            let x = value[0], y = value[1], z = value[2];
+            if (x) arr.push(`x=${x}`);
+            if (y) arr.push(`y=${y}`);
+            if (z) arr.push(`z=${z}`);
+          }
+          break;
+        case &apos;radius&apos;:
+          if (value instanceof Array) {
+            let rmin = value[0], rmax = value[1];
+            if (rmin) arr.push(`rm=${rmin}`);
+            if (rmax) arr.push(`r=${rmax}`);
+          }
+          break;
+        case &apos;gamemode&apos;:
+          if (value instanceof Number) {
+            arr.push(`m=${value}`);
+          }
+          break;
+        case &apos;count&apos;:
+          if (value instanceof Number) {
+            arr.push(`c=${value}`);
+          }
+          break;
+        // TODO: resolve the rest arguments.
+        default:
+          throw new Error(`unresolved argument: ${key}`);
+          break;
+      }
+      str += str ? &apos;,&apos; : &apos;&apos;;
+      str += arr.join(&apos;,&apos;);
+    }
+    return `[${str}]`;
+  }
+
+  /**
+   * return assembled string.
+   * @returns {string}
+   */
+  toString() {
+    return [this._variable, this._arguments].join(&apos;&apos;);
+  }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

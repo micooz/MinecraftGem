@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/micooz/MinecraftGem" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">commands</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/command.js~Command.html">Command</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/give.js~Give.html">Give</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/msg.js~Msg.html">Msg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/say.js~Say.html">Say</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/spawnpoint.js~Spawnpoint.html">Spawnpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/tell.js~Tell.html">Tell</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/w.js~W.html">W</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">concepts</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/coordinate.js~Coordinate.html">Coordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/target.js~TargetSelector.html">TargetSelector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-items">items</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toDataTag">toDataTag</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="minecraftgem">MinecraftGem</h1>
+<p>A javascript library spawns commands for Command-Block of Minecraft.</p>
+<h2 id="aim">Aim</h2>
+<p>The aim of the library is to simplify Minecraft Map Makers&apos; work. However, it just a javascript library, that is to say, coding before using.</p>
+<p>I hope that someone can use this library to make a web app, providing GUI features for map makers.</p>
+<h2 id="installation">Installation</h2>
+<pre><code><code class="source-code prettyprint">$ npm install</code>
+</code></pre><h2 id="features">Features</h2>
+<ul>
+<li>Concepts</li>
+<li>[x] Item</li>
+<li>[x] TargetSelector</li>
+<li>[x] Coordinate</li>
+<li><p>[x] Player</p>
+</li>
+<li><p>Commands</p>
+</li>
+<li>[x] give</li>
+<li>[x] tell / msg / w</li>
+<li>[x] say</li>
+<li>[x] spawnpoint</li>
+</ul>
+<h2 id="apis">APIs</h2>
+<p>Generally, each API provides a <code>toString()</code> method to get a plain string.</p>
+<h3 id="concepts">Concepts</h3>
+<p><strong>TargetSelector</strong></p>
+<blockquote>
+<p>A target selector variable identifies the broad category of targets to select.
+see <a href="http://minecraft.gamepedia.com/Commands#Target_selectors">HERE</a>.</p>
+</blockquote>
+<p>To create a <code>TargetSelector</code> and then get string, you can:</p>
+<pre><code><code class="source-code prettyprint">const {TargetSelector} = require(&apos;./src/concepts&apos;);
+const ts = new TargetSelector(&apos;p&apos;);
+ts.toString(); // &apos;@p&apos;</code>
+</code></pre><p>more complex example:</p>
+<pre><code><code class="source-code prettyprint">const ts = new TargetSelector(&apos;a&apos;, {
+  coordinate: [100, undefined, 300],
+  count: 3,
+  team: &apos;red&apos;
+});
+ts.toString(); // &apos;@a[x=100,z=300,c=3,team=red]&apos;</code>
+</code></pre><p><strong>Item</strong></p>
+<p>which can be found at:
+<a href="http://minecraft.gamepedia.com/Data_values#Item_IDs">http://minecraft.gamepedia.com/Data_values#Item_IDs</a></p>
+<p>To create an item:</p>
+<pre><code><code class="source-code prettyprint">const {
+  Item
+} = require(&apos;../src/concepts&apos;);
+
+const item = new Item(&apos;bow&apos;);
+item.toString(); // &apos;minecraft:bow&apos;</code>
+</code></pre><p><strong>Player</strong></p>
+<p>You can use a plain string or a TargetSelector to create a player:</p>
+<pre><code><code class="source-code prettyprint">const {
+  Player,
+  TargetSelector
+} = require(&apos;../src/concepts&apos;);
+
+const playerMike = new Player(&apos;Mike&apos;);
+const playerClosest = new Player(
+  new TargetSelector(&apos;p&apos;)
+);</code>
+</code></pre><h3 id="commands">Commands</h3>
+<p><strong>Say Command</strong></p>
+<p><a href="http://minecraft.gamepedia.com/Commands#say">http://minecraft.gamepedia.com/Commands#say</a></p>
+<pre><code><code class="source-code prettyprint">const {Say} = require(./src/commands);
+
+const say = new Say(&apos;Hi everybody!&apos;);
+say.toString(); // &apos;/say Hi everybody&apos;</code>
+</code></pre><p><strong>Tell Command</strong></p>
+<p><a href="http://minecraft.gamepedia.com/Commands#tell">http://minecraft.gamepedia.com/Commands#tell</a></p>
+<pre><code><code class="source-code prettyprint">const {Tell} = require(&apos;.src/commands&apos;);
+
+const tell = new Tell(new Player(&apos;Mike&apos;), &apos;Hi Mike&apos;);
+tell.toString(); // &apos;/tell Mike Hi Mike&apos;</code>
+</code></pre><p><strong>Give Command</strong></p>
+<p><a href="http://minecraft.gamepedia.com/Commands#give">http://minecraft.gamepedia.com/Commands#give</a></p>
+<blockquote>
+<p>Gives an item to a player.</p>
+</blockquote>
+<p>To give 64 apples to Mike:</p>
+<pre><code><code class="source-code prettyprint">const {
+  Item,
+  Player
+} = require(&apos;../src/concepts&apos;);
+const {Give} = require(./src/commands);
+
+const give = new Give(
+  new Player(&apos;Mike&apos;),
+  new Item(&apos;apple&apos;),
+  64,
+  1,
+  {display: {Lore: [&quot;Apple here&quot;]}}
+);
+give.toString(); // &apos;/give Mike minecraft:apple 64 1 {display:{Lore:[&quot;Apple here&quot;]}}&apos;</code>
+</code></pre><p>Some other commands are not listed above, I will put them in the specific document.</p>
+<h2 id="test">Test</h2>
+<p>I use <code>mocha</code> to do tests, simply run:</p>
+<pre><code><code class="source-code prettyprint">$ npm test</code>
+</code></pre><h2 id="todos-progress">Todos / Progress</h2>
+<ul>
+<li>[ ] <a href="http://minecraft.gamepedia.com/Particles#Particles">Particles</a></li>
+<li>[ ] <a href="http://minecraft.gamepedia.com/Potions">Potions</a></li>
+<li>[ ] <a href="http://minecraft.gamepedia.com/Data_Values">Data Values</a></li>
+<li>[ ] <a href="http://minecraft.gamepedia.com/Status_effect">Status Effect</a></li>
+<li>[ ] <a href="http://minecraft.gamepedia.com/Commands#Data_tags">DataTags</a></li>
+<li>[ ] ...</li>
+</ul>
+<p>The project just getting started, and I think it will become very huge. I just try to make a simple <strong>Framework</strong>.</p>
+<p>For a long period to come, I will fill in the framework with a lot of data and simple logic. I finished a little data as well as logic at present, and I really need your help.</p>
+<p>I&apos;ll be glad if you send me some PullRequests :)</p>
+<h2 id="license">License</h2>
+<p>MIT</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

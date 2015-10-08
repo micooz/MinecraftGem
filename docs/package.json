@@ -1,0 +1,43 @@
+{
+  "name": "minecraft-gem",
+  "version": "0.1.0",
+  "description": "A javascript library spawns commands for Command-Block of Minecraft",
+  "repository": "https://github.com/micooz/MinecraftGem",
+  "license": "MIT",
+  "main": "src/index.js",
+  "homepage": "https://github.com/micooz/MinecraftGem#readme",
+  "keywords": [
+    "Minecraft",
+    "command",
+    "command-block",
+    "utility"
+  ],
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "esdoc": "^0.4.0",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.3",
+    "mocha-traceur": "^2.1.0",
+    "should": "^7.1.0",
+    "traceur": "0.0.91"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --compilers js:mocha-traceur test",
+    "babel": "node_modules/.bin/babel src -d lib --experimental -w",
+    "esdoc": "node_modules/.bin/esdoc -c esdoc.json"
+  },
+  "maintainers": [
+    {
+      "name": "Micooz",
+      "email": "micooz@hotmail.com"
+    }
+  ],
+  "contributors": [
+    {
+      "url": "https://github.com/micooz/MinecraftGem/graphs/contributors"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/micooz/MinecraftGem/issues"
+  }
+}

@@ -1,0 +1,4330 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/command.js",
+    "memberof": null,
+    "longname": "src/commands/command.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 6,
+    "content": "/** @module commands */\n\n/**\n * The base class of all minecraft commands.\n */\nexport default class Command {\n\n  /**\n   *\n   */\n  constructor() {\n    this._name = undefined;\n    this._options = undefined;\n  }\n\n  /**\n   * assemble command and return a string.\n   * @returns {string, TypeError}\n   */\n  toString() {\n    const name = this._name, options = this._options;\n    if (typeof name == 'string' && typeof options == 'string') {\n      return '/' + [name, options].join(' ');\n    } else {\n      throw new TypeError('when assemble command.');\n    }\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Command",
+    "memberof": "src/commands/command.js",
+    "longname": "src/commands/command.js~Command",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/command.js",
+    "importStyle": "Command",
+    "description": "The base class of all minecraft commands.",
+    "lineNumber": 6,
+    "interface": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/command.js~Command",
+    "longname": "src/commands/command.js~Command#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 11,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 3,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/command.js~Command",
+    "longname": "src/commands/command.js~Command#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_options",
+    "memberof": "src/commands/command.js~Command",
+    "longname": "src/commands/command.js~Command#_options",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/commands/command.js~Command",
+    "longname": "src/commands/command.js~Command#toString",
+    "access": null,
+    "description": "assemble command and return a string.",
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string, TypeError}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string, TypeError"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 6,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/give.js",
+    "memberof": null,
+    "longname": "src/commands/give.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module commands */\n\nimport Command from './command';\nimport Helper from '../helpers';\nconst {Item, Player} = require('../concepts');\n\n/**\n * Gives an item to a player.\n * @example\n * let give = new Give(\n *   new Player('Mike'),\n *   new Item('apple'),\n *   64,\n *   0,\n *   {...}\n * );\n * @see http://minecraft.gamepedia.com/Commands#give\n */\nexport default class Give extends Command {\n\n  /**\n   * @param {Player} player\n   * @param {Item} item\n   * @param {Number} amount\n   * @param {Number} data\n   * @param {Object} dataTag\n   */\n  constructor(player, item, amount = 1, data = 0, dataTag = {}) {\n    super();\n    this._name = 'give';\n\n    if (!(player instanceof Player)) {\n      throw new TypeError('player should be an instance of Player');\n    }\n\n    if (!(item instanceof Item)) {\n      throw new TypeError('item should be an instance of Item');\n    }\n\n    this._options = [\n      player.toString(),\n      item.toString(),\n      amount.toString(),\n      data.toString(),\n      Helper.toDataTag(dataTag)\n    ].join(' ');\n  }\n\n}"
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Item",
+    "memberof": "src/commands/give.js",
+    "longname": "src/commands/give.js~Item",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/commands/give.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Give",
+    "memberof": "src/commands/give.js",
+    "longname": "src/commands/give.js~Give",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/give.js",
+    "importStyle": "Give",
+    "description": "Gives an item to a player.",
+    "examples": [
+      "let give = new Give(\n  new Player('Mike'),\n  new Item('apple'),\n  64,\n  0,\n  {...}\n);"
+    ],
+    "see": [
+      "http://minecraft.gamepedia.com/Commands#give"
+    ],
+    "lineNumber": 19,
+    "interface": false,
+    "extends": [
+      "src/commands/command~Command"
+    ]
+  },
+  {
+    "__docId__": 9,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/give.js~Give",
+    "longname": "src/commands/give.js~Give#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Player"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "player",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Item"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "item",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "amount",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dataTag",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 10,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/give.js~Give",
+    "longname": "src/commands/give.js~Give#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_options",
+    "memberof": "src/commands/give.js~Give",
+    "longname": "src/commands/give.js~Give#_options",
+    "access": null,
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/index.js",
+    "memberof": null,
+    "longname": "src/commands/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "module.exports = {\n  Say: require('./say'),\n  Tell: require('./tell'), Msg: require('./msg'), W: require('./w'),\n  Spawnpoint: require('./spawnpoint'),\n  Give: require('./give')\n};"
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/msg.js",
+    "memberof": null,
+    "longname": "src/commands/msg.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module commands */\n\nimport Tell from './tell';\n\n/**\n * Alias of Tell command.\n *\n * @example\n * const msg = new Msg('Mike', 'Hello');\n */\nexport default class Msg extends Tell {\n\n  /**\n   * @param {Player} player\n   * @param {string} msg\n   */\n  constructor(player, msg) {\n    super(player, msg);\n    this._name = 'msg';\n  }\n\n}"
+  },
+  {
+    "__docId__": 14,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Msg",
+    "memberof": "src/commands/msg.js",
+    "longname": "src/commands/msg.js~Msg",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/msg.js",
+    "importStyle": "Msg",
+    "description": "Alias of Tell command.",
+    "examples": [
+      "const msg = new Msg('Mike', 'Hello');"
+    ],
+    "lineNumber": 11,
+    "interface": false,
+    "extends": [
+      "src/commands/tell~Tell"
+    ]
+  },
+  {
+    "__docId__": 15,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/msg.js~Msg",
+    "longname": "src/commands/msg.js~Msg#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Player"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "player",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "msg",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 16,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/msg.js~Msg",
+    "longname": "src/commands/msg.js~Msg#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 17,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/say.js",
+    "memberof": null,
+    "longname": "src/commands/say.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module commands */\n\nimport Command from './command';\n\n/**\n * Sends a message in the chat to other players.\n *\n * @example\n * const say = new Say('hi there');\n *\n * @see\n * http://minecraft.gamepedia.com/Commands#say\n */\nexport default class Say extends Command {\n\n  /**\n   * @param {string} msg\n   */\n  constructor(msg) {\n    super();\n    this._name = 'say';\n\n    if (typeof msg == 'string') {\n      this._options = msg || '';\n    } else {\n      throw new TypeError('msg should be String');\n    }\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 18,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Say",
+    "memberof": "src/commands/say.js",
+    "longname": "src/commands/say.js~Say",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/say.js",
+    "importStyle": "Say",
+    "description": "Sends a message in the chat to other players.",
+    "examples": [
+      "const say = new Say('hi there');"
+    ],
+    "see": [
+      "http://minecraft.gamepedia.com/Commands#say"
+    ],
+    "lineNumber": 14,
+    "interface": false,
+    "extends": [
+      "src/commands/command~Command"
+    ]
+  },
+  {
+    "__docId__": 19,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/say.js~Say",
+    "longname": "src/commands/say.js~Say#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "msg",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 20,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/say.js~Say",
+    "longname": "src/commands/say.js~Say#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 21,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_options",
+    "memberof": "src/commands/say.js~Say",
+    "longname": "src/commands/say.js~Say#_options",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/spawnpoint.js",
+    "memberof": null,
+    "longname": "src/commands/spawnpoint.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module commands */\n\nimport Command from './command';\nconst {Player, Coordinate} = require('../concepts');\n\n/**\n * Sets the spawn point for a player.\n *\n * @example\n * const spawnpoint = new Spawnpoint(\n *   new Player('Mike'),\n *   new Coordinate(10, 20, 30) // optional\n * );\n * @see\n * http://minecraft.gamepedia.com/Commands#spawnpoint\n */\nexport default class Spawnpoint extends Command {\n\n  /**\n   * @param {Player} player\n   * @param {Coordinate} coordinate\n   */\n  constructor(player, coordinate) {\n    super();\n\n    this._name = 'spawnpoint';\n\n    coordinate = coordinate || new Coordinate();\n\n    if (!(player instanceof Player)) {\n      throw TypeError('player should be an instance of Player');\n    }\n\n    if (!(coordinate instanceof Coordinate)) {\n      throw TypeError('coordinate should be an instance of Coordinate');\n    }\n\n    this._options = [player.toString(), coordinate.toString()].join(' ');\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 23,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Player",
+    "memberof": "src/commands/spawnpoint.js",
+    "longname": "src/commands/spawnpoint.js~Player",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/commands/spawnpoint.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Spawnpoint",
+    "memberof": "src/commands/spawnpoint.js",
+    "longname": "src/commands/spawnpoint.js~Spawnpoint",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/spawnpoint.js",
+    "importStyle": "Spawnpoint",
+    "description": "Sets the spawn point for a player.",
+    "examples": [
+      "const spawnpoint = new Spawnpoint(\n  new Player('Mike'),\n  new Coordinate(10, 20, 30) // optional\n);"
+    ],
+    "see": [
+      "http://minecraft.gamepedia.com/Commands#spawnpoint"
+    ],
+    "lineNumber": 17,
+    "interface": false,
+    "extends": [
+      "src/commands/command~Command"
+    ]
+  },
+  {
+    "__docId__": 25,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/spawnpoint.js~Spawnpoint",
+    "longname": "src/commands/spawnpoint.js~Spawnpoint#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Player"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "player",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Coordinate"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "coordinate",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 26,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/spawnpoint.js~Spawnpoint",
+    "longname": "src/commands/spawnpoint.js~Spawnpoint#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_options",
+    "memberof": "src/commands/spawnpoint.js~Spawnpoint",
+    "longname": "src/commands/spawnpoint.js~Spawnpoint#_options",
+    "access": null,
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/tell.js",
+    "memberof": null,
+    "longname": "src/commands/tell.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module commands */\n\nimport Command from './command';\nconst {Player} = require('../concepts');\n\n/**\n * Sends a private message to one or more players.\n *\n * @example\n * const tell = new Tell(new Player('Mike'), 'hi there');\n */\nexport default class Tell extends Command {\n\n  /**\n   * @param {Player} player\n   * @param {string} msg\n   * @throw {TypeError} throw error when params type mismatch.\n   */\n  constructor(player, msg) {\n    super();\n    this._name = 'tell';\n\n    if (!(player instanceof Player)) {\n      throw new TypeError('player should be an instance of Player');\n    }\n\n    if (typeof msg != 'string') {\n      throw new TypeError('msg should be a string');\n    }\n\n    this._options = [player.toString(), msg].join(' ');\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 29,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Player",
+    "memberof": "src/commands/tell.js",
+    "longname": "src/commands/tell.js~Player",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/commands/tell.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Tell",
+    "memberof": "src/commands/tell.js",
+    "longname": "src/commands/tell.js~Tell",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/tell.js",
+    "importStyle": "Tell",
+    "description": "Sends a private message to one or more players.",
+    "examples": [
+      "const tell = new Tell(new Player('Mike'), 'hi there');"
+    ],
+    "lineNumber": 12,
+    "interface": false,
+    "extends": [
+      "src/commands/command~Command"
+    ]
+  },
+  {
+    "__docId__": 31,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/tell.js~Tell",
+    "longname": "src/commands/tell.js~Tell#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 19,
+    "unknown": [
+      {
+        "tagName": "@throw",
+        "tagValue": "{TypeError} throw error when params type mismatch."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Player"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "player",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "msg",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 32,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/tell.js~Tell",
+    "longname": "src/commands/tell.js~Tell#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_options",
+    "memberof": "src/commands/tell.js~Tell",
+    "longname": "src/commands/tell.js~Tell#_options",
+    "access": null,
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/commands/w.js",
+    "memberof": null,
+    "longname": "src/commands/w.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module commands */\n\nimport Tell from './tell';\n\n/**\n * Alias of Tell command\n */\nexport default class W extends Tell {\n\n  /**\n   * @param {Player} player\n   * @param {string} msg\n   */\n  constructor(player, msg) {\n    super(player, msg);\n    this._name = 'w';\n  }\n\n}"
+  },
+  {
+    "__docId__": 35,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "W",
+    "memberof": "src/commands/w.js",
+    "longname": "src/commands/w.js~W",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/commands/w.js",
+    "importStyle": "W",
+    "description": "Alias of Tell command",
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/commands/tell~Tell"
+    ]
+  },
+  {
+    "__docId__": 36,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/commands/w.js~W",
+    "longname": "src/commands/w.js~W#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Player"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "player",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "msg",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 37,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/commands/w.js~W",
+    "longname": "src/commands/w.js~W#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/concepts/coordinate.js",
+    "memberof": null,
+    "longname": "src/concepts/coordinate.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "content": "/** @module concepts */\n\n/**\n * Represents a coordinate composed by X, Y, Z.\n *\n * @example\n * const coordinate = new Coordinate(); // ''\n * const coordinate = new Coordinate(10, 20, 30); // '10 20 30'\n */\nexport default class Coordinate {\n\n  /**\n   * @param {...} args [X, Y, Z]\n   * @throws {Error} throw error when arg.length !==3.\n   */\n  constructor(...args) {\n    if (typeof args == 'undefined') {\n      this._str = '';\n      return;\n    }\n\n    if (args.length !== 3) {\n      throw new Error('invalid coordinate');\n    }\n\n    const x = args[0], y = args[1], z = args[2];\n\n    this._str = `${x} ${y} ${z}`;\n  }\n\n  /**\n   * return assembled string\n   * @returns {string}\n   */\n  toString() {\n    return this._str;\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 39,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Coordinate",
+    "memberof": "src/concepts/coordinate.js",
+    "longname": "src/concepts/coordinate.js~Coordinate",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/concepts/coordinate.js",
+    "importStyle": "Coordinate",
+    "description": "Represents a coordinate composed by X, Y, Z.",
+    "examples": [
+      "const coordinate = new Coordinate(); // ''\nconst coordinate = new Coordinate(10, 20, 30); // '10 20 30'"
+    ],
+    "lineNumber": 10,
+    "interface": false
+  },
+  {
+    "__docId__": 40,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/concepts/coordinate.js~Coordinate",
+    "longname": "src/concepts/coordinate.js~Coordinate#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 16,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "[X, Y, Z]"
+      }
+    ],
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "throw error when arg.length !==3."
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_str",
+    "memberof": "src/concepts/coordinate.js~Coordinate",
+    "longname": "src/concepts/coordinate.js~Coordinate#_str",
+    "access": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 42,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_str",
+    "memberof": "src/concepts/coordinate.js~Coordinate",
+    "longname": "src/concepts/coordinate.js~Coordinate#_str",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 43,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/concepts/coordinate.js~Coordinate",
+    "longname": "src/concepts/coordinate.js~Coordinate#toString",
+    "access": null,
+    "description": "return assembled string",
+    "lineNumber": 35,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 44,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/concepts/index.js",
+    "memberof": null,
+    "longname": "src/concepts/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "module.exports = {\n  Coordinate: require('./coordinate'),\n  Item: require('./item'),\n  Player: require('./player'),\n  TargetSelector: require('./target')\n};\n"
+  },
+  {
+    "__docId__": 45,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/concepts/item.js",
+    "memberof": null,
+    "longname": "src/concepts/item.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module concepts */\n\nimport ItemIDs from '../constants/items';\n\n/**\n * Represents an Item Name.\n *\n * @example\n * const Apple = new Item('apple');\n *\n * @see\n * constants/items.js\n */\nexport default class Item {\n\n  /**\n   * @param {string} name\n   * @throw {Error} when name is empty.\n   */\n  constructor(name) {\n    if (typeof name != 'string' || !name) {\n      throw new Error('Item name must be set');\n    }\n    this._name = name;\n  }\n\n  /**\n   * return item name in the form of Minecraft.\n   *\n   * @return {string}\n   */\n  toString() {\n    return ItemIDs[this._name];\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 46,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Item",
+    "memberof": "src/concepts/item.js",
+    "longname": "src/concepts/item.js~Item",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/concepts/item.js",
+    "importStyle": "Item",
+    "description": "Represents an Item Name.",
+    "examples": [
+      "const Apple = new Item('apple');"
+    ],
+    "see": [
+      "constants/items.js"
+    ],
+    "lineNumber": 14,
+    "interface": false
+  },
+  {
+    "__docId__": 47,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/concepts/item.js~Item",
+    "longname": "src/concepts/item.js~Item#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@throw",
+        "tagValue": "{Error} when name is empty."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 48,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_name",
+    "memberof": "src/concepts/item.js~Item",
+    "longname": "src/concepts/item.js~Item#_name",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/concepts/item.js~Item",
+    "longname": "src/concepts/item.js~Item#toString",
+    "access": null,
+    "description": "return item name in the form of Minecraft.",
+    "lineNumber": 32,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/concepts/player.js",
+    "memberof": null,
+    "longname": "src/concepts/player.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "/** @module concepts */\n\nimport TargetSelector from './target';\n\n/**\n * Represents a player which can be a target selector or a plain string.\n *\n * @example\n * const player = new Player('Mike');\n * const player = new Player(new TargetSelector('p', {\n *   radius: [10, 40]\n * }));\n */\nexport default class Player {\n\n  /**\n   * @param {TargetSelector|string} who\n   * @throw {TypeError} when type mismatch.\n   */\n  constructor(who) {\n    if (who instanceof TargetSelector || typeof who == 'string') {\n      this._who = who;\n    } else {\n      throw TypeError('who must be a string or target selector');\n    }\n  }\n\n  /**\n   * return assembled string.\n   *\n   * @returns {string}\n   */\n  toString() {\n    const who = this._who;\n    return (who instanceof TargetSelector) ? who.toString() : who;\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Player",
+    "memberof": "src/concepts/player.js",
+    "longname": "src/concepts/player.js~Player",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/concepts/player.js",
+    "importStyle": "Player",
+    "description": "Represents a player which can be a target selector or a plain string.",
+    "examples": [
+      "const player = new Player('Mike');\nconst player = new Player(new TargetSelector('p', {\n  radius: [10, 40]\n}));"
+    ],
+    "lineNumber": 14,
+    "interface": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/concepts/player.js~Player",
+    "longname": "src/concepts/player.js~Player#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@throw",
+        "tagValue": "{TypeError} when type mismatch."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "TargetSelector",
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "who",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_who",
+    "memberof": "src/concepts/player.js~Player",
+    "longname": "src/concepts/player.js~Player#_who",
+    "access": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/concepts/player.js~Player",
+    "longname": "src/concepts/player.js~Player#toString",
+    "access": null,
+    "description": "return assembled string.",
+    "lineNumber": 33,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/concepts/target.js",
+    "memberof": null,
+    "longname": "src/concepts/target.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "content": "/** @module concepts */\n\n/**\n * The target selector\n *\n * @example\n * const target = new TargetSelector('p');\n * target.toString(); // @p\n *\n * const targetWithArgs = new TargetSelector('p', {\n *   coordinate: [x, y, z],\n *   radius: [min, max],\n *   gamemode: Gamemode.ALL,\n *   count: 3,\n *   level: [min, max],\n *   score: [min, max],\n *   team: 'Red',\n *   name: 'name',\n *   volume: [dx, dy, dz],\n *   vertical: [min, max],\n *   horizontal: [min, max],\n *   type: 'Creeper'\n * });\n *\n * @see\n * http://minecraft.gamepedia.com/Commands#Target_selector_arguments\n */\nexport default class TargetSelector {\n\n  /**\n   * @param {string} variable can be 'p', 'r', 'a', 'e'.\n   * @param {object} args the options for variable.\n   */\n  constructor(variable, args) {\n    this._variable = {\n      'p': '@p', // nearest player\n      'r': '@r', // random player\n      'a': '@a', // all players\n      'e': '@e' // all entities\n    }[variable || 'p'];\n    this._arguments = this._getArgsString(args);\n  }\n\n  _getArgsString(args) {\n    if (typeof args == 'undefined') {\n      return '';\n    }\n    let str = '';\n    for (let key in args) {\n      let value = args[key], arr = [];\n      switch (key) {\n        case 'coordinate':\n          if (value instanceof Array) {\n            let x = value[0], y = value[1], z = value[2];\n            if (x) arr.push(`x=${x}`);\n            if (y) arr.push(`y=${y}`);\n            if (z) arr.push(`z=${z}`);\n          }\n          break;\n        case 'radius':\n          if (value instanceof Array) {\n            let rmin = value[0], rmax = value[1];\n            if (rmin) arr.push(`rm=${rmin}`);\n            if (rmax) arr.push(`r=${rmax}`);\n          }\n          break;\n        case 'gamemode':\n          if (value instanceof Number) {\n            arr.push(`m=${value}`);\n          }\n          break;\n        case 'count':\n          if (value instanceof Number) {\n            arr.push(`c=${value}`);\n          }\n          break;\n        // TODO: resolve the rest arguments.\n        default:\n          throw new Error(`unresolved argument: ${key}`);\n          break;\n      }\n      str += str ? ',' : '';\n      str += arr.join(',');\n    }\n    return `[${str}]`;\n  }\n\n  /**\n   * return assembled string.\n   * @returns {string}\n   */\n  toString() {\n    return [this._variable, this._arguments].join('');\n  }\n\n}\n"
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "TargetSelector",
+    "memberof": "src/concepts/target.js",
+    "longname": "src/concepts/target.js~TargetSelector",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/concepts/target.js",
+    "importStyle": "TargetSelector",
+    "description": "The target selector",
+    "examples": [
+      "const target = new TargetSelector('p');\ntarget.toString(); // @p\n\nconst targetWithArgs = new TargetSelector('p', {\n  coordinate: [x, y, z],\n  radius: [min, max],\n  gamemode: Gamemode.ALL,\n  count: 3,\n  level: [min, max],\n  score: [min, max],\n  team: 'Red',\n  name: 'name',\n  volume: [dx, dy, dz],\n  vertical: [min, max],\n  horizontal: [min, max],\n  type: 'Creeper'\n});"
+    ],
+    "see": [
+      "http://minecraft.gamepedia.com/Commands#Target_selector_arguments"
+    ],
+    "lineNumber": 28,
+    "interface": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/concepts/target.js~TargetSelector",
+    "longname": "src/concepts/target.js~TargetSelector#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "variable",
+        "description": "can be 'p', 'r', 'a', 'e'."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args",
+        "description": "the options for variable."
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_variable",
+    "memberof": "src/concepts/target.js~TargetSelector",
+    "longname": "src/concepts/target.js~TargetSelector#_variable",
+    "access": null,
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_arguments",
+    "memberof": "src/concepts/target.js~TargetSelector",
+    "longname": "src/concepts/target.js~TargetSelector#_arguments",
+    "access": null,
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "_getArgsString",
+    "memberof": "src/concepts/target.js~TargetSelector",
+    "longname": "src/concepts/target.js~TargetSelector#_getArgsString",
+    "access": null,
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "params": [
+      {
+        "name": "args",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "string"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/concepts/target.js~TargetSelector",
+    "longname": "src/concepts/target.js~TargetSelector#toString",
+    "access": null,
+    "description": "return assembled string.",
+    "lineNumber": 92,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 62,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/constants/blocks.js",
+    "memberof": null,
+    "longname": "src/constants/blocks.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * define all block IDs\n * http://minecraft.gamepedia.com/Data_values#Block_IDs\n */\nlet blocks = [];\n\n[\"grass\", \"planks\", \"flowing_water\", \"flowing_lava\", \"log\", \"lapis_ore\", \"lapis_block\", \"noteblock\", \"golden_rail\", \"web\", \"tallgrass\", \"deadbush\", \"piston_head\", \"piston_extension\", \"yellow_flower\", \"red_flower\", \"gold_block\", \"iron_block\", \"brick_block\", \"mossy_cobblestone\", \"mob_spawner\", \"oak_stairs\", \"diamond_block\", \"lit_furnace\", \"standing_sign\", \"wooden_door\", \"stone_stairs\", \"wall_sign\", \"lit_redstone_ore\", \"unlit_redstone_torch\", \"snow_layer\", \"reeds\", \"lit_pumpkin\", \"unpowered_repeater\", \"powered_repeater\", \"stonebrick\", \"brown_mushroom_block\", \"red_mushroom_block\", \"melon_block\", \"vine\", \"waterlily\", \"enchanting_table\", \"lit_redstone_lamp\", \"emerald_block\", \"spruce_stairs\", \"birch_stairs\", \"jungle_stairs\", \"carrots\", \"potatoes\", \"skull\", \"light_weighted_pressure_plate\", \"heavy_weighted_pressure_plate\", \"unpowered_comparator\", \"powered_comparator\", \"daylight_detector\", \"redstone_block\", \"quartz_ore\", \"quartz_block\", \"stained_hardened_clay\", \"leaves2\", \"log2\", \"acacia_stairs\", \"dark_oak_stairs\", \"slime\", \"hay_block\", \"coal_block\", \"double_plant\", \"standing_banner\", \"wall_banner\", \"daylight_detector_inverted\", \"double_stone_slab2\", \"stone_slab2\", \"spruce_fence_gate\", \"birch_fence_gate\", \"jungle_fence_gate\", \"dark_oak_fence_gate\", \"acacia_fence_gate\", \"spruce_fence\", \"birch_fence\", \"jungle_fence\", \"dark_oak_fence\", \"end_bricks\", \"beetroots\"]\n  .forEach(function (key) {\n    blocks[key] = `minecraft:${key}`;\n  });\n\nmodule.exports = blocks;"
+  },
+  {
+    "__docId__": 63,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "blocks",
+    "memberof": "src/constants/blocks.js",
+    "longname": "src/constants/blocks.js~blocks",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/constants/blocks.js",
+    "importStyle": null,
+    "description": "define all block IDs\nhttp://minecraft.gamepedia.com/Data_values#Block_IDs",
+    "lineNumber": 5,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/constants/entities.js",
+    "memberof": null,
+    "longname": "src/constants/entities.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "content": "/**\n * define all entities IDs\n * http://minecraft.gamepedia.com/Data_values#Entity_IDs\n *\n * summon <EntityName> [x] [y] [z] [dataTag]\n *\n */\nlet entities =\n  [\"Item\", \"XPOrb\", \"LeashKnot\", \"Painting\", \"ItemFrame\", \"ArmorStand\", \"EnderCrystal\", \"ThrownEgg\", \"Arrow\", \"Snowball\", \"Fireball\", \"ThrownEnderpearl\", \"EyeOfEnderSignal\", \"ThrownPotion\", \"ThrownExpBottle\", \"WitherSkull\", \"FireworksRocketEntity\", \"PrimedTnt\", \"FallingSand\", \"MinecartCommandBlock\", \"Boat\", \"MinecartRideable\", \"MinecartChest\", \"MinecartFurnace\", \"MinecartTNT\", \"MinecartHopper\", \"MinecartSpawner\", \"Mob\", \"Monster\", \"Creeper\", \"Skeleton\", \"Spider\", \"Giant\", \"Zombie\", \"Slime\", \"Ghast\", \"PigZombie\", \"Enderman\", \"CaveSpider\", \"Silverfish\", \"Blaze\", \"LavaSlime\", \"EnderDragon\", \"WitherBoss\", \"Witch\", \"Endermite\", \"Guardian\", \"Shulker\", \"Rabbit\", \"Bat\", \"Pig\", \"Sheep\", \"Cow\", \"Chicken\", \"Squid\", \"Wolf\", \"MushroomCow\", \"SnowMan\", \"Ozelot\", \"VillagerGolem\", \"EntityHorse\", \"Rabbit\", \"Villager\"];\n\nmodule.exports = entities;"
+  },
+  {
+    "__docId__": 65,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "entities",
+    "memberof": "src/constants/entities.js",
+    "longname": "src/constants/entities.js~entities",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/constants/entities.js",
+    "importStyle": null,
+    "description": "define all entities IDs\nhttp://minecraft.gamepedia.com/Data_values#Entity_IDs\n\nsummon <EntityName> [x] [y] [z] [dataTag]",
+    "lineNumber": 8,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/constants/gamemode.js",
+    "memberof": null,
+    "longname": "src/constants/gamemode.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "module.exports = {\n  'ALL': -1,\n  'SURVIVAL': 0,\n  'CREATIVE': 1,\n  'ADVENTURE': 2,\n  'SPECTATOR': 3\n};"
+  },
+  {
+    "__docId__": 67,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/constants/items.js",
+    "memberof": null,
+    "longname": "src/constants/items.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "content": "/** @module constants */\n\n/**\n * Represents all item IDs.\n *\n * @see\n * http://minecraft.gamepedia.com/Data_values#Item_IDs\n */\nlet items = {};\n\n[\"iron_shovel\", \"iron_pickaxe\", \"iron_axe\", \"flint_and_steel\", \"apple\", \"bow\", \"arrow\", \"coal\", \"diamond\", \"iron_ingot\", \"gold_ingot\", \"iron_sword\", \"wooden_sword\", \"wooden_shovel\", \"wooden_pickaxe\", \"wooden_axe\", \"stone_sword\", \"stone_shovel\", \"stone_pickaxe\", \"stone_axe\", \"diamond_sword\", \"diamond_shovel\", \"diamond_pickaxe\", \"diamond_axe\", \"stick\", \"bowl\", \"mushroom_stew\", \"golden_sword\", \"golden_shovel\", \"golden_pickaxe\", \"golden_axe\", \"string\", \"feather\", \"gunpowder\", \"wooden_hoe\", \"stone_hoe\", \"iron_hoe\", \"diamond_hoe\", \"golden_hoe\", \"wheat_seeds\", \"wheat\", \"bread\", \"leather_helmet\", \"leather_chestplate\", \"leather_leggings\", \"leather_boots\", \"chainmail_helmet\", \"chainmail_chestplate\", \"chainmail_leggings\", \"chainmail_boots\", \"iron_helmet\", \"iron_chestplate\", \"iron_leggings\", \"iron_boots\", \"diamond_helmet\", \"diamond_chestplate\", \"diamond_leggings\", \"diamond_boots\", \"golden_helmet\", \"golden_chestplate\", \"golden_leggings\", \"golden_boots\", \"flint\", \"porkchop\", \"cooked_porkchop\", \"painting\", \"golden_apple\", \"sign\", \"wooden_door\", \"bucket\", \"water_bucket\", \"lava_bucket\", \"minecart\", \"saddle\", \"iron_door\", \"redstone\", \"snowball\", \"boat\", \"leather\", \"milk_bucket\", \"brick\", \"clay_ball\", \"reeds\", \"paper\", \"book\", \"slime_ball\", \"chest_minecart\", \"furnace_minecart\", \"egg\", \"compass\", \"fishing_rod\", \"clock\", \"glowstone_dust\", \"fish\", \"cooked_fish\", \"dye\", \"bone\", \"sugar\", \"cake\", \"bed\", \"repeater\", \"cookie\", \"filled_map\", \"shears\", \"melon\", \"pumpkin_seeds\", \"melon_seeds\", \"beef\", \"cooked_beef\", \"chicken\", \"cooked_chicken\", \"rotten_flesh\", \"ender_pearl\", \"blaze_rod\", \"ghast_tear\", \"gold_nugget\", \"nether_wart\", \"potion\", \"glass_bottle\", \"spider_eye\", \"fermented_spider_eye\", \"blaze_powder\", \"magma_cream\", \"brewing_stand\", \"cauldron\", \"ender_eye\", \"speckled_melon\", \"spawn_egg\", \"experience_bottle\", \"fire_charge\", \"writable_book\", \"written_book\", \"emerald\", \"item_frame\", \"flower_pot\", \"carrot\", \"potato\", \"baked_potato\", \"poisonous_potato\", \"map\", \"golden_carrot\", \"skull\", \"carrot_on_a_stick\", \"nether_star\", \"pumpkin_pie\", \"fireworks\", \"firework_charge\", \"enchanted_book\", \"comparator\", \"netherbrick\", \"quartz\", \"tnt_minecart\", \"hopper_minecart\", \"prismarine_shard\", \"prismarine_crystals\", \"rabbit\", \"cooked_rabbit\", \"rabbit_stew\", \"rabbit_foot\", \"rabbit_hide\", \"armor_stand\", \"iron_horse_armor\", \"golden_horse_armor\", \"diamond_horse_armor\", \"lead\", \"name_tag\", \"command_block_minecart\", \"mutton\", \"cooked_mutton\", \"banner\", \"spruce_door\", \"birch_door\", \"jungle_door\", \"acacia_door\", \"dark_oak_door\", \"chorus_fruit\", \"popped_chorus_fruit\", \"beetroot\", \"beetroot_seeds\", \"beetroot_soup\", \"splash_potion\", \"spectral_arrow\", \"tipped_arrow\", \"lingering_potion\", \"shield\", \"record_cat\", \"record_blocks\", \"record_chirp\", \"record_far\", \"record_mall\", \"record_mellohi\", \"record_stal\", \"record_strad\", \"record_ward\", \"record_wait\"]\n  .forEach(function (key) {\n    items[key] = `minecraft:${key}`;\n  });\n\nexport default items;"
+  },
+  {
+    "__docId__": 68,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "items",
+    "memberof": "src/constants/items.js",
+    "longname": "src/constants/items.js~items",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/constants/items.js",
+    "importStyle": "items",
+    "description": "Represents all item IDs.",
+    "see": [
+      "http://minecraft.gamepedia.com/Data_values#Item_IDs"
+    ],
+    "lineNumber": 9,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/blockentity/Banner.js",
+    "memberof": null,
+    "longname": "src/datatags/blockentity/Banner.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import BlockEntityDataTag from './base';\n\nmodule.exports = class BannerDataTag extends BlockEntityDataTag {\n\n  constructor() {\n    super();\n    this.Base = Number;\n    this.Patterns = [\n      {Color: Number, Pattern: Array}\n    ];\n  }\n\n};"
+  },
+  {
+    "__docId__": 70,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/blockentity/Banner.js",
+    "longname": "src/datatags/blockentity/Banner.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/blockentity/Banner.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/datatags/blockentity/base~BlockEntityDataTag"
+    ]
+  },
+  {
+    "__docId__": 71,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/blockentity/Banner.js~exports",
+    "longname": "src/datatags/blockentity/Banner.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 72,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Base",
+    "memberof": "src/datatags/blockentity/Banner.js~exports",
+    "longname": "src/datatags/blockentity/Banner.js~exports#Base",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Patterns",
+    "memberof": "src/datatags/blockentity/Banner.js~exports",
+    "longname": "src/datatags/blockentity/Banner.js~exports#Patterns",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/blockentity/base.js",
+    "memberof": null,
+    "longname": "src/datatags/blockentity/base.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import _ from 'lodash';\nimport Helper from '../../helpers';\n\nmodule.exports = class BlockEntityDataTag {\n\n  constructor() {\n    this.id = String;\n    this.x = Number;\n    this.y = Number;\n    this.z = Number;\n  }\n\n  toString() {\n    return Helper.toDataTag(this);\n  }\n\n};"
+  },
+  {
+    "__docId__": 75,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/blockentity/base.js",
+    "longname": "src/datatags/blockentity/base.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/blockentity/base.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 76,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/blockentity/base.js~exports",
+    "longname": "src/datatags/blockentity/base.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 77,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "id",
+    "memberof": "src/datatags/blockentity/base.js~exports",
+    "longname": "src/datatags/blockentity/base.js~exports#id",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "x",
+    "memberof": "src/datatags/blockentity/base.js~exports",
+    "longname": "src/datatags/blockentity/base.js~exports#x",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "y",
+    "memberof": "src/datatags/blockentity/base.js~exports",
+    "longname": "src/datatags/blockentity/base.js~exports#y",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "z",
+    "memberof": "src/datatags/blockentity/base.js~exports",
+    "longname": "src/datatags/blockentity/base.js~exports#z",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/datatags/blockentity/base.js~exports",
+    "longname": "src/datatags/blockentity/base.js~exports#toString",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 82,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/blockentity/index.js",
+    "memberof": null,
+    "longname": "src/datatags/blockentity/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "module.exports = {\n  BannerDataTag: require('./Banner')\n};\n"
+  },
+  {
+    "__docId__": 83,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/breed.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/breed.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * Additional fields for mobs that can breed\n * @type {Breed}\n */\nmodule.exports = class Breed {\n\n  constructor() {\n    this.InLove = Number;\n    this.Age = Number;\n    this.ForcedAge = Number;\n  }\n\n};"
+  },
+  {
+    "__docId__": 84,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/breed.js",
+    "longname": "src/datatags/entity/breed.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/breed.js",
+    "importStyle": null,
+    "description": "Additional fields for mobs that can breed",
+    "lineNumber": 5,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Breed"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 85,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/breed.js~exports",
+    "longname": "src/datatags/entity/breed.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "InLove",
+    "memberof": "src/datatags/entity/breed.js~exports",
+    "longname": "src/datatags/entity/breed.js~exports#InLove",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Age",
+    "memberof": "src/datatags/entity/breed.js~exports",
+    "longname": "src/datatags/entity/breed.js~exports#Age",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "ForcedAge",
+    "memberof": "src/datatags/entity/breed.js~exports",
+    "longname": "src/datatags/entity/breed.js~exports#ForcedAge",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/dynamic/FallingSand.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/dynamic/FallingSand.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/dynamic/PrimedTnt.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/dynamic/PrimedTnt.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 91,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/entity.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/entity.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n *\n * @type {Entity}\n */\nmodule.exports = class Entity {\n\n  constructor() {\n    this.id = String;\n    this.Pos = [\n      // X, Y, Z\n      Number, Number, Number\n    ];\n    this.Motion = [\n      // dX, dY, dZ\n      Number, Number, Number\n    ];\n    this.Rotation = [\n      Number, Number\n    ];\n    this.FallDistance = Number;\n    this.Fire = Number;\n    this.Air = Number;\n    this.OnGround = Number; // 1 or 0\n    this.Dimension = Number; // -1 for The Nether, 0 for The Overworld, and 1 for The End.\n    this.Invulnerable = Number; // 1 or 0\n    this.PortalCooldown = Number;\n    this.UUIDMost = Number;\n    this.UUIDLeast = Number;\n    this.UUID = Number;\n    this.CustomName = String;\n    this.CustomNameVisible = Number; // 1 or 0\n    this.Silent = Number; // 1 or 0\n    // this.Riding = {};\n    this.Glowing = Number; // 1 or 0\n    this.Tags = [];\n    this.CommandStats = {\n      SuccessCountObjective: String,\n      SuccessCountName: String,\n      AffectedBlocksObjective: String,\n      AffectedBlocksName: String,\n      AffectedEntitiesObjective: String,\n      AffectedEntitiesName: String,\n      AffectedItemsObjective: String,\n      AffectedItemsName: String,\n      QueryResultObjective: String,\n      QueryResultName: String\n    };\n  }\n\n};"
+  },
+  {
+    "__docId__": 92,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/entity.js",
+    "longname": "src/datatags/entity/entity.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/entity.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 5,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Entity"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 93,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "id",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#id",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Pos",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Pos",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Motion",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Motion",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Rotation",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Rotation",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "FallDistance",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#FallDistance",
+    "access": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Fire",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Fire",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Air",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Air",
+    "access": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "OnGround",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#OnGround",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Dimension",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Dimension",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Invulnerable",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Invulnerable",
+    "access": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "PortalCooldown",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#PortalCooldown",
+    "access": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "UUIDMost",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#UUIDMost",
+    "access": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "UUIDLeast",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#UUIDLeast",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "UUID",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#UUID",
+    "access": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "CustomName",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#CustomName",
+    "access": null,
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "CustomNameVisible",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#CustomNameVisible",
+    "access": null,
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Silent",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Silent",
+    "access": null,
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Glowing",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Glowing",
+    "access": null,
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Tags",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#Tags",
+    "access": null,
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "CommandStats",
+    "memberof": "src/datatags/entity/entity.js~exports",
+    "longname": "src/datatags/entity/entity.js~exports#CommandStats",
+    "access": null,
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/items/Item.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/items/Item.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import ItemXPOrbs from 'itemXPOrbs';\n\nmodule.exports = class Item extends ItemXPOrbs {\n\n  constructor() {\n    super();\n    this.Health = Number;\n    this.PickupDelay = Number;\n    this.Owner = Number;\n    this.Thrower = Number;\n    this.Item = {};\n  }\n\n};"
+  },
+  {
+    "__docId__": 115,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/items/Item.js",
+    "longname": "src/datatags/entity/items/Item.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/items/Item.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "itemXPOrbs~ItemXPOrbs"
+    ]
+  },
+  {
+    "__docId__": 116,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/items/Item.js~exports",
+    "longname": "src/datatags/entity/items/Item.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 117,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Health",
+    "memberof": "src/datatags/entity/items/Item.js~exports",
+    "longname": "src/datatags/entity/items/Item.js~exports#Health",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "PickupDelay",
+    "memberof": "src/datatags/entity/items/Item.js~exports",
+    "longname": "src/datatags/entity/items/Item.js~exports#PickupDelay",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Owner",
+    "memberof": "src/datatags/entity/items/Item.js~exports",
+    "longname": "src/datatags/entity/items/Item.js~exports#Owner",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Thrower",
+    "memberof": "src/datatags/entity/items/Item.js~exports",
+    "longname": "src/datatags/entity/items/Item.js~exports#Thrower",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 121,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Item",
+    "memberof": "src/datatags/entity/items/Item.js~exports",
+    "longname": "src/datatags/entity/items/Item.js~exports#Item",
+    "access": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/items/XPOrb.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/items/XPOrb.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import ItemXPOrbs from 'itemXPOrbs';\n\nmodule.exports = class XPOrbs extends ItemXPOrbs {\n\n  constructor() {\n    super();\n    this.Health = Number;\n    this.Value = Number;\n  }\n\n};"
+  },
+  {
+    "__docId__": 123,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/items/XPOrb.js",
+    "longname": "src/datatags/entity/items/XPOrb.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/items/XPOrb.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "itemXPOrbs~ItemXPOrbs"
+    ]
+  },
+  {
+    "__docId__": 124,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/items/XPOrb.js~exports",
+    "longname": "src/datatags/entity/items/XPOrb.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 125,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Health",
+    "memberof": "src/datatags/entity/items/XPOrb.js~exports",
+    "longname": "src/datatags/entity/items/XPOrb.js~exports#Health",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Value",
+    "memberof": "src/datatags/entity/items/XPOrb.js~exports",
+    "longname": "src/datatags/entity/items/XPOrb.js~exports#Value",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/items/itemXPOrbs.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/items/itemXPOrbs.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Entity from '../entity';\n\nmodule.exports = class ItemsXPOrbs extends Entity {\n\n  constructor() {\n    super();\n    this.Age = Number;\n  }\n\n};"
+  },
+  {
+    "__docId__": 128,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/items/itemXPOrbs.js",
+    "longname": "src/datatags/entity/items/itemXPOrbs.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/items/itemXPOrbs.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/datatags/entity/entity~Entity"
+    ]
+  },
+  {
+    "__docId__": 129,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/items/itemXPOrbs.js~exports",
+    "longname": "src/datatags/entity/items/itemXPOrbs.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 130,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Age",
+    "memberof": "src/datatags/entity/items/itemXPOrbs.js~exports",
+    "longname": "src/datatags/entity/items/itemXPOrbs.js~exports#Age",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/mobs/Bat.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/mobs/Bat.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Mob from './mob'\n\nmodule.exports = class Bat extends Mob {\n\n  constructor() {\n    super();\n    this.BatFlags = Number; // 1 when hanging upside-down from a block, 0 when flying.\n  }\n\n};"
+  },
+  {
+    "__docId__": 132,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/mobs/Bat.js",
+    "longname": "src/datatags/entity/mobs/Bat.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/mobs/Bat.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/datatags/entity/mobs/mob~Mob"
+    ]
+  },
+  {
+    "__docId__": 133,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/mobs/Bat.js~exports",
+    "longname": "src/datatags/entity/mobs/Bat.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 134,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "BatFlags",
+    "memberof": "src/datatags/entity/mobs/Bat.js~exports",
+    "longname": "src/datatags/entity/mobs/Bat.js~exports#BatFlags",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/mobs/mob.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/mobs/mob.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Entity from '../entity';\n\n/**\n * the base class of all mobs\n * @type {Entity}\n */\nmodule.exports = class Mob extends Entity {\n\n  constructor() {\n    super();\n    this.Health = Number;\n    this.AbsorptionAmount = Number;\n    this.AttackTime = Number;\n    this.HurtTime = Number;\n    this.HurtByTimestamp = Number;\n    this.DeathTime = Number;\n    this.Attributes = [{\n      Name: String,\n      Base: Number,\n      Modifiers: {\n        Name: String,\n        Amount: Number,\n        Operation: Number,\n        UUIDMost: Number,\n        UUIDLeast: Number\n      }\n    }];\n    this.ActiveEffects = [{\n      Id: Number,\n      Amplifier: Number,\n      Duration: Number,\n      Ambient: Number, // 1 or 0\n      ShowParticles: Number\n    }];\n    this.HandItems = [\n      {}, // The item being held in the mob's main hand.\n      {}  // The item being held in the mob's off hand.\n    ];\n    this.ArmorItems = [\n      {}, // Armor (Feet)\n      {}, // Armor (Legs)\n      {}, // Armor (Chest)\n      {}  // Armor (Head)\n    ];\n    this.HandDropChances = [\n      Number, // carried in the main hand\n      Number  // carried in the off hand\n    ];\n    this.ArmorDropChances = [\n      Number, // (Feet)\n      Number, // (Legs)\n      Number, // (Chest)\n      Number  // (Head)\n    ];\n    this.CanPickUpLoot = Number; // 1 or 0\n    this.NoAI = Number; // 1 or 0\n    this.PersistenceRequired = Number; // 1 or 0\n    this.LeftHanded = Number; // 1 or 0\n    this.Team = String;\n    this.Leashed = Number; // 1 or 0\n    this.Leash = {\n      UUIDMost: Number,\n      UUIDLeast: Number,\n      X: Number,\n      Y: Number,\n      Z: Number\n    };\n  }\n\n};"
+  },
+  {
+    "__docId__": 136,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/mobs/mob.js",
+    "longname": "src/datatags/entity/mobs/mob.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/mobs/mob.js",
+    "importStyle": null,
+    "description": "the base class of all mobs",
+    "lineNumber": 7,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Entity"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false,
+    "extends": [
+      "src/datatags/entity/entity~Entity"
+    ]
+  },
+  {
+    "__docId__": 137,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 138,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Health",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#Health",
+    "access": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "AbsorptionAmount",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#AbsorptionAmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "AttackTime",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#AttackTime",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "HurtTime",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#HurtTime",
+    "access": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "HurtByTimestamp",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#HurtByTimestamp",
+    "access": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 143,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "DeathTime",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#DeathTime",
+    "access": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Attributes",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#Attributes",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "ActiveEffects",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#ActiveEffects",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "HandItems",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#HandItems",
+    "access": null,
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "ArmorItems",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#ArmorItems",
+    "access": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "HandDropChances",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#HandDropChances",
+    "access": null,
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "ArmorDropChances",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#ArmorDropChances",
+    "access": null,
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 150,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "CanPickUpLoot",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#CanPickUpLoot",
+    "access": null,
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 151,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "NoAI",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#NoAI",
+    "access": null,
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 152,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "PersistenceRequired",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#PersistenceRequired",
+    "access": null,
+    "description": null,
+    "lineNumber": 57,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "LeftHanded",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#LeftHanded",
+    "access": null,
+    "description": null,
+    "lineNumber": 58,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Team",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#Team",
+    "access": null,
+    "description": null,
+    "lineNumber": 59,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 155,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Leashed",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#Leashed",
+    "access": null,
+    "description": null,
+    "lineNumber": 60,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Leash",
+    "memberof": "src/datatags/entity/mobs/mob.js~exports",
+    "longname": "src/datatags/entity/mobs/mob.js~exports#Leash",
+    "access": null,
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/other/AreaEffectCloud.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/other/AreaEffectCloud.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 158,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/projectiles/Arrow.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/projectiles/Arrow.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Projectiles from './projectiles';\n\nmodule.exports = class Arrow extends Projectiles {\n\n  constructor() {\n    super();\n    this.inData = Number;\n    this.pickup = Number;\n    this.player = Number; // 1 or 0\n    this.life = Number;\n    this.damage = Number;\n    this.inGround = Number; // 1 or 0\n  }\n\n};"
+  },
+  {
+    "__docId__": 159,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/projectiles/Arrow.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/datatags/entity/projectiles/projectiles~Projectiles"
+    ]
+  },
+  {
+    "__docId__": 160,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 161,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "inData",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#inData",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "pickup",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#pickup",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "player",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#player",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "life",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#life",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "damage",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#damage",
+    "access": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "inGround",
+    "memberof": "src/datatags/entity/projectiles/Arrow.js~exports",
+    "longname": "src/datatags/entity/projectiles/Arrow.js~exports#inGround",
+    "access": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 167,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/projectiles/SpectralArrow.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/projectiles/SpectralArrow.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 168,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/projectiles/TippedArrow.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/projectiles/TippedArrow.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 169,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/projectiles/projectiles.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/projectiles/projectiles.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Entity from '../entity'\n\nmodule.exports = class Projectiles extends Entity {\n\n  constructor() {\n    super();\n    this.xTile = Number;\n    this.yTile = Number;\n    this.zTile = Number;\n    this.inTile = String;\n  }\n\n};"
+  },
+  {
+    "__docId__": 170,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/projectiles/projectiles.js",
+    "longname": "src/datatags/entity/projectiles/projectiles.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/projectiles/projectiles.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/datatags/entity/entity~Entity"
+    ]
+  },
+  {
+    "__docId__": 171,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/projectiles/projectiles.js~exports",
+    "longname": "src/datatags/entity/projectiles/projectiles.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 172,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "xTile",
+    "memberof": "src/datatags/entity/projectiles/projectiles.js~exports",
+    "longname": "src/datatags/entity/projectiles/projectiles.js~exports#xTile",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "yTile",
+    "memberof": "src/datatags/entity/projectiles/projectiles.js~exports",
+    "longname": "src/datatags/entity/projectiles/projectiles.js~exports#yTile",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "zTile",
+    "memberof": "src/datatags/entity/projectiles/projectiles.js~exports",
+    "longname": "src/datatags/entity/projectiles/projectiles.js~exports#zTile",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 175,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "inTile",
+    "memberof": "src/datatags/entity/projectiles/projectiles.js~exports",
+    "longname": "src/datatags/entity/projectiles/projectiles.js~exports#inTile",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 176,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/tame.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/tame.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * Additional fields for mobs that can be tamed by players\n * @type {Tame}\n */\nmodule.exports = class Tame {\n\n  constructor() {\n    this.Owner = String;\n    this.OwnerUUID = String;\n    this.Sitting = Number; // 1 or 0\n  }\n\n};"
+  },
+  {
+    "__docId__": 177,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/tame.js",
+    "longname": "src/datatags/entity/tame.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/tame.js",
+    "importStyle": null,
+    "description": "Additional fields for mobs that can be tamed by players",
+    "lineNumber": 5,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Tame"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 178,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/tame.js~exports",
+    "longname": "src/datatags/entity/tame.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 179,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Owner",
+    "memberof": "src/datatags/entity/tame.js~exports",
+    "longname": "src/datatags/entity/tame.js~exports#Owner",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 180,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "OwnerUUID",
+    "memberof": "src/datatags/entity/tame.js~exports",
+    "longname": "src/datatags/entity/tame.js~exports#OwnerUUID",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 181,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "Sitting",
+    "memberof": "src/datatags/entity/tame.js~exports",
+    "longname": "src/datatags/entity/tame.js~exports#Sitting",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 182,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/vehicles/MinecartChest.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/vehicles/MinecartChest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 183,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/vehicles/MinecartHopper.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/vehicles/MinecartHopper.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// TODO"
+  },
+  {
+    "__docId__": 184,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/datatags/entity/vehicles/vehicles.js",
+    "memberof": null,
+    "longname": "src/datatags/entity/vehicles/vehicles.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Entity from '../entity';\n\nmodule.exports = class Vehicles extends Entity {\n\n  constructor() {\n    super();\n    this.CustomDisplayTile = Number; // 1 or 0\n    this.DisplayTile = String;\n    this.DisplayData = Number;\n    this.DisplayOffset = Number;\n  }\n\n};\n"
+  },
+  {
+    "__docId__": 185,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "exports",
+    "memberof": "src/datatags/entity/vehicles/vehicles.js",
+    "longname": "src/datatags/entity/vehicles/vehicles.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "minecraft-gem/src/datatags/entity/vehicles/vehicles.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/datatags/entity/entity~Entity"
+    ]
+  },
+  {
+    "__docId__": 186,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/datatags/entity/vehicles/vehicles.js~exports",
+    "longname": "src/datatags/entity/vehicles/vehicles.js~exports#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 187,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "CustomDisplayTile",
+    "memberof": "src/datatags/entity/vehicles/vehicles.js~exports",
+    "longname": "src/datatags/entity/vehicles/vehicles.js~exports#CustomDisplayTile",
+    "access": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 188,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "DisplayTile",
+    "memberof": "src/datatags/entity/vehicles/vehicles.js~exports",
+    "longname": "src/datatags/entity/vehicles/vehicles.js~exports#DisplayTile",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 189,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "DisplayData",
+    "memberof": "src/datatags/entity/vehicles/vehicles.js~exports",
+    "longname": "src/datatags/entity/vehicles/vehicles.js~exports#DisplayData",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 190,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "DisplayOffset",
+    "memberof": "src/datatags/entity/vehicles/vehicles.js~exports",
+    "longname": "src/datatags/entity/vehicles/vehicles.js~exports#DisplayOffset",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 191,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/helpers/datatag.js",
+    "memberof": null,
+    "longname": "src/helpers/datatag.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "content": "/** @module helper */\n\n/**\n * Converts an javascript object to Minecraft DataTag.\n * @param {object} obj\n * @returns {string}\n */\nexport default function toDataTag(obj) {\n  if (typeof obj != 'object') {\n    throw new TypeError('obj must be an object');\n  }\n  return JSON.stringify(obj).replace(/\"(\\w+)\":/g, '$1:');\n}\n"
+  },
+  {
+    "__docId__": 192,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "toDataTag",
+    "memberof": "src/helpers/datatag.js",
+    "longname": "src/helpers/datatag.js~toDataTag",
+    "access": null,
+    "export": true,
+    "importPath": "minecraft-gem/src/helpers/datatag.js",
+    "importStyle": "toDataTag",
+    "description": "Converts an javascript object to Minecraft DataTag.",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 193,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/helpers/index.js",
+    "memberof": null,
+    "longname": "src/helpers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "module.exports = {\n  toDataTag: require('./datatag')\n};"
+  },
+  {
+    "__docId__": 194,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/index.js",
+    "memberof": null,
+    "longname": "src/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * export core parts\n * @type {{concepts: (*|exports|module.exports), commands: (*|exports|module.exports), constants: (Object|*), datatags: (Object|*)}}\n */\nmodule.exports = {\n  concepts: require('./concepts'),\n  commands: require('./commands')\n  //constants: require('./constants'),\n  //datatags: require('./datatags')\n};\n"
+  },
+  {
+    "__docId__": 196,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 197,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 198,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 199,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 200,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 201,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 202,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 203,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 204,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 205,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 206,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 207,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 208,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 209,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 210,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 211,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 212,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 213,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 214,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 215,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 216,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 217,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 218,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 219,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 220,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 221,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 222,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 223,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 224,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 225,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 226,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 227,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 228,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 229,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 230,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 231,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 232,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 233,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 234,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 235,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 236,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 237,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 238,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 239,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 240,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 241,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 242,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 244,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 245,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 246,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 247,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 248,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 249,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 250,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": null,
+    "builtinExternal": true
+  }
+]

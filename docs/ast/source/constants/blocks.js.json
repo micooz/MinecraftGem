@@ -1,0 +1,2139 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "blocks",
+            "range": [
+              92,
+              98
+            ],
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 4
+              },
+              "end": {
+                "line": 5,
+                "column": 10
+              }
+            }
+          },
+          "init": {
+            "type": "ArrayExpression",
+            "elements": [],
+            "range": [
+              101,
+              103
+            ],
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 13
+              },
+              "end": {
+                "line": 5,
+                "column": 15
+              }
+            }
+          },
+          "range": [
+            92,
+            103
+          ],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 4
+            },
+            "end": {
+              "line": 5,
+              "column": 15
+            }
+          }
+        }
+      ],
+      "kind": "let",
+      "range": [
+        88,
+        104
+      ],
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 16
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * define all block IDs\n * http://minecraft.gamepedia.com/Data_values#Block_IDs\n ",
+          "range": [
+            0,
+            87
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 4,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "ArrayExpression",
+            "elements": [
+              {
+                "type": "Literal",
+                "value": "grass",
+                "raw": "\"grass\"",
+                "range": [
+                  107,
+                  114
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 8
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "planks",
+                "raw": "\"planks\"",
+                "range": [
+                  116,
+                  124
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 18
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "flowing_water",
+                "raw": "\"flowing_water\"",
+                "range": [
+                  126,
+                  141
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 20
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 35
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "flowing_lava",
+                "raw": "\"flowing_lava\"",
+                "range": [
+                  143,
+                  157
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 37
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 51
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "log",
+                "raw": "\"log\"",
+                "range": [
+                  159,
+                  164
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 53
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 58
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lapis_ore",
+                "raw": "\"lapis_ore\"",
+                "range": [
+                  166,
+                  177
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 60
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 71
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lapis_block",
+                "raw": "\"lapis_block\"",
+                "range": [
+                  179,
+                  192
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 73
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 86
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "noteblock",
+                "raw": "\"noteblock\"",
+                "range": [
+                  194,
+                  205
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 88
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 99
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "golden_rail",
+                "raw": "\"golden_rail\"",
+                "range": [
+                  207,
+                  220
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 101
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 114
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "web",
+                "raw": "\"web\"",
+                "range": [
+                  222,
+                  227
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 116
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 121
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "tallgrass",
+                "raw": "\"tallgrass\"",
+                "range": [
+                  229,
+                  240
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 123
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 134
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "deadbush",
+                "raw": "\"deadbush\"",
+                "range": [
+                  242,
+                  252
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 136
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 146
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "piston_head",
+                "raw": "\"piston_head\"",
+                "range": [
+                  254,
+                  267
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 148
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 161
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "piston_extension",
+                "raw": "\"piston_extension\"",
+                "range": [
+                  269,
+                  287
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 163
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 181
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "yellow_flower",
+                "raw": "\"yellow_flower\"",
+                "range": [
+                  289,
+                  304
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 183
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 198
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "red_flower",
+                "raw": "\"red_flower\"",
+                "range": [
+                  306,
+                  318
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 200
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 212
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "gold_block",
+                "raw": "\"gold_block\"",
+                "range": [
+                  320,
+                  332
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 214
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 226
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "iron_block",
+                "raw": "\"iron_block\"",
+                "range": [
+                  334,
+                  346
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 228
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 240
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "brick_block",
+                "raw": "\"brick_block\"",
+                "range": [
+                  348,
+                  361
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 242
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 255
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "mossy_cobblestone",
+                "raw": "\"mossy_cobblestone\"",
+                "range": [
+                  363,
+                  382
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 257
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 276
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "mob_spawner",
+                "raw": "\"mob_spawner\"",
+                "range": [
+                  384,
+                  397
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 278
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 291
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "oak_stairs",
+                "raw": "\"oak_stairs\"",
+                "range": [
+                  399,
+                  411
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 293
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 305
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "diamond_block",
+                "raw": "\"diamond_block\"",
+                "range": [
+                  413,
+                  428
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 307
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 322
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lit_furnace",
+                "raw": "\"lit_furnace\"",
+                "range": [
+                  430,
+                  443
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 324
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 337
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "standing_sign",
+                "raw": "\"standing_sign\"",
+                "range": [
+                  445,
+                  460
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 339
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 354
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wooden_door",
+                "raw": "\"wooden_door\"",
+                "range": [
+                  462,
+                  475
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 356
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 369
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_stairs",
+                "raw": "\"stone_stairs\"",
+                "range": [
+                  477,
+                  491
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 371
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 385
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wall_sign",
+                "raw": "\"wall_sign\"",
+                "range": [
+                  493,
+                  504
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 387
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 398
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lit_redstone_ore",
+                "raw": "\"lit_redstone_ore\"",
+                "range": [
+                  506,
+                  524
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 400
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 418
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "unlit_redstone_torch",
+                "raw": "\"unlit_redstone_torch\"",
+                "range": [
+                  526,
+                  548
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 420
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 442
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "snow_layer",
+                "raw": "\"snow_layer\"",
+                "range": [
+                  550,
+                  562
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 444
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 456
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "reeds",
+                "raw": "\"reeds\"",
+                "range": [
+                  564,
+                  571
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 458
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 465
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lit_pumpkin",
+                "raw": "\"lit_pumpkin\"",
+                "range": [
+                  573,
+                  586
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 467
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 480
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "unpowered_repeater",
+                "raw": "\"unpowered_repeater\"",
+                "range": [
+                  588,
+                  608
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 482
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 502
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "powered_repeater",
+                "raw": "\"powered_repeater\"",
+                "range": [
+                  610,
+                  628
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 504
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 522
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stonebrick",
+                "raw": "\"stonebrick\"",
+                "range": [
+                  630,
+                  642
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 524
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 536
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "brown_mushroom_block",
+                "raw": "\"brown_mushroom_block\"",
+                "range": [
+                  644,
+                  666
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 538
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 560
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "red_mushroom_block",
+                "raw": "\"red_mushroom_block\"",
+                "range": [
+                  668,
+                  688
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 562
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 582
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "melon_block",
+                "raw": "\"melon_block\"",
+                "range": [
+                  690,
+                  703
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 584
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 597
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "vine",
+                "raw": "\"vine\"",
+                "range": [
+                  705,
+                  711
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 599
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 605
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "waterlily",
+                "raw": "\"waterlily\"",
+                "range": [
+                  713,
+                  724
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 607
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 618
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "enchanting_table",
+                "raw": "\"enchanting_table\"",
+                "range": [
+                  726,
+                  744
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 620
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 638
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "lit_redstone_lamp",
+                "raw": "\"lit_redstone_lamp\"",
+                "range": [
+                  746,
+                  765
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 640
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 659
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "emerald_block",
+                "raw": "\"emerald_block\"",
+                "range": [
+                  767,
+                  782
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 661
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 676
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spruce_stairs",
+                "raw": "\"spruce_stairs\"",
+                "range": [
+                  784,
+                  799
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 678
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 693
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "birch_stairs",
+                "raw": "\"birch_stairs\"",
+                "range": [
+                  801,
+                  815
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 695
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 709
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "jungle_stairs",
+                "raw": "\"jungle_stairs\"",
+                "range": [
+                  817,
+                  832
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 711
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 726
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "carrots",
+                "raw": "\"carrots\"",
+                "range": [
+                  834,
+                  843
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 728
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 737
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "potatoes",
+                "raw": "\"potatoes\"",
+                "range": [
+                  845,
+                  855
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 739
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 749
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "skull",
+                "raw": "\"skull\"",
+                "range": [
+                  857,
+                  864
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 751
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 758
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "light_weighted_pressure_plate",
+                "raw": "\"light_weighted_pressure_plate\"",
+                "range": [
+                  866,
+                  897
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 760
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 791
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "heavy_weighted_pressure_plate",
+                "raw": "\"heavy_weighted_pressure_plate\"",
+                "range": [
+                  899,
+                  930
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 793
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 824
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "unpowered_comparator",
+                "raw": "\"unpowered_comparator\"",
+                "range": [
+                  932,
+                  954
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 826
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 848
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "powered_comparator",
+                "raw": "\"powered_comparator\"",
+                "range": [
+                  956,
+                  976
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 850
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 870
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "daylight_detector",
+                "raw": "\"daylight_detector\"",
+                "range": [
+                  978,
+                  997
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 872
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 891
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "redstone_block",
+                "raw": "\"redstone_block\"",
+                "range": [
+                  999,
+                  1015
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 893
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 909
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "quartz_ore",
+                "raw": "\"quartz_ore\"",
+                "range": [
+                  1017,
+                  1029
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 911
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 923
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "quartz_block",
+                "raw": "\"quartz_block\"",
+                "range": [
+                  1031,
+                  1045
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 925
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 939
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stained_hardened_clay",
+                "raw": "\"stained_hardened_clay\"",
+                "range": [
+                  1047,
+                  1070
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 941
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 964
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "leaves2",
+                "raw": "\"leaves2\"",
+                "range": [
+                  1072,
+                  1081
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 966
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 975
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "log2",
+                "raw": "\"log2\"",
+                "range": [
+                  1083,
+                  1089
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 977
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 983
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "acacia_stairs",
+                "raw": "\"acacia_stairs\"",
+                "range": [
+                  1091,
+                  1106
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 985
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1000
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "dark_oak_stairs",
+                "raw": "\"dark_oak_stairs\"",
+                "range": [
+                  1108,
+                  1125
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1002
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1019
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "slime",
+                "raw": "\"slime\"",
+                "range": [
+                  1127,
+                  1134
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1021
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1028
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "hay_block",
+                "raw": "\"hay_block\"",
+                "range": [
+                  1136,
+                  1147
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1030
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1041
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "coal_block",
+                "raw": "\"coal_block\"",
+                "range": [
+                  1149,
+                  1161
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1043
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1055
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "double_plant",
+                "raw": "\"double_plant\"",
+                "range": [
+                  1163,
+                  1177
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1057
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1071
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "standing_banner",
+                "raw": "\"standing_banner\"",
+                "range": [
+                  1179,
+                  1196
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1073
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1090
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "wall_banner",
+                "raw": "\"wall_banner\"",
+                "range": [
+                  1198,
+                  1211
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1092
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1105
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "daylight_detector_inverted",
+                "raw": "\"daylight_detector_inverted\"",
+                "range": [
+                  1213,
+                  1241
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1107
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1135
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "double_stone_slab2",
+                "raw": "\"double_stone_slab2\"",
+                "range": [
+                  1243,
+                  1263
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1137
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1157
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "stone_slab2",
+                "raw": "\"stone_slab2\"",
+                "range": [
+                  1265,
+                  1278
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1159
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1172
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spruce_fence_gate",
+                "raw": "\"spruce_fence_gate\"",
+                "range": [
+                  1280,
+                  1299
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1174
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1193
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "birch_fence_gate",
+                "raw": "\"birch_fence_gate\"",
+                "range": [
+                  1301,
+                  1319
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1195
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1213
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "jungle_fence_gate",
+                "raw": "\"jungle_fence_gate\"",
+                "range": [
+                  1321,
+                  1340
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1215
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1234
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "dark_oak_fence_gate",
+                "raw": "\"dark_oak_fence_gate\"",
+                "range": [
+                  1342,
+                  1363
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1236
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1257
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "acacia_fence_gate",
+                "raw": "\"acacia_fence_gate\"",
+                "range": [
+                  1365,
+                  1384
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1259
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1278
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "spruce_fence",
+                "raw": "\"spruce_fence\"",
+                "range": [
+                  1386,
+                  1400
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1280
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1294
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "birch_fence",
+                "raw": "\"birch_fence\"",
+                "range": [
+                  1402,
+                  1415
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1296
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1309
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "jungle_fence",
+                "raw": "\"jungle_fence\"",
+                "range": [
+                  1417,
+                  1431
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1311
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1325
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "dark_oak_fence",
+                "raw": "\"dark_oak_fence\"",
+                "range": [
+                  1433,
+                  1449
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1327
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1343
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "end_bricks",
+                "raw": "\"end_bricks\"",
+                "range": [
+                  1451,
+                  1463
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1345
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1357
+                  }
+                }
+              },
+              {
+                "type": "Literal",
+                "value": "beetroots",
+                "raw": "\"beetroots\"",
+                "range": [
+                  1465,
+                  1476
+                ],
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1359
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 1370
+                  }
+                }
+              }
+            ],
+            "range": [
+              106,
+              1477
+            ],
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 7,
+                "column": 1371
+              }
+            }
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "forEach",
+            "range": [
+              1481,
+              1488
+            ],
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 3
+              },
+              "end": {
+                "line": 8,
+                "column": 10
+              }
+            }
+          },
+          "range": [
+            106,
+            1488
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 10
+            }
+          }
+        },
+        "arguments": [
+          {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "key",
+                "range": [
+                  1499,
+                  1502
+                ],
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 21
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 24
+                  }
+                }
+              }
+            ],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "MemberExpression",
+                      "computed": true,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "blocks",
+                        "range": [
+                          1510,
+                          1516
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 9,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 10
+                          }
+                        }
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "key",
+                        "range": [
+                          1517,
+                          1520
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 9,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 14
+                          }
+                        }
+                      },
+                      "range": [
+                        1510,
+                        1521
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 15
+                        }
+                      }
+                    },
+                    "right": {
+                      "type": "TemplateLiteral",
+                      "quasis": [
+                        {
+                          "type": "TemplateElement",
+                          "value": {
+                            "raw": "minecraft:",
+                            "cooked": "minecraft:"
+                          },
+                          "tail": false,
+                          "range": [
+                            1524,
+                            1537
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 9,
+                              "column": 18
+                            },
+                            "end": {
+                              "line": 9,
+                              "column": 31
+                            }
+                          }
+                        },
+                        {
+                          "type": "TemplateElement",
+                          "value": {
+                            "raw": "",
+                            "cooked": ""
+                          },
+                          "tail": true,
+                          "range": [
+                            1540,
+                            1542
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 9,
+                              "column": 34
+                            },
+                            "end": {
+                              "line": 9,
+                              "column": 36
+                            }
+                          }
+                        }
+                      ],
+                      "expressions": [
+                        {
+                          "type": "Identifier",
+                          "name": "key",
+                          "range": [
+                            1537,
+                            1540
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 9,
+                              "column": 31
+                            },
+                            "end": {
+                              "line": 9,
+                              "column": 34
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        1524,
+                        1542
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 18
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 36
+                        }
+                      }
+                    },
+                    "range": [
+                      1510,
+                      1542
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 36
+                      }
+                    }
+                  },
+                  "range": [
+                    1510,
+                    1543
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 9,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 37
+                    }
+                  }
+                }
+              ],
+              "range": [
+                1504,
+                1547
+              ],
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 26
+                },
+                "end": {
+                  "line": 10,
+                  "column": 3
+                }
+              }
+            },
+            "generator": false,
+            "expression": false,
+            "range": [
+              1489,
+              1547
+            ],
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 11
+              },
+              "end": {
+                "line": 10,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "range": [
+          106,
+          1548
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 0
+          },
+          "end": {
+            "line": 10,
+            "column": 4
+          }
+        }
+      },
+      "range": [
+        106,
+        1549
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "module",
+            "range": [
+              1551,
+              1557
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
+                "column": 6
+              }
+            }
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "exports",
+            "range": [
+              1558,
+              1565
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 7
+              },
+              "end": {
+                "line": 12,
+                "column": 14
+              }
+            }
+          },
+          "range": [
+            1551,
+            1565
+          ],
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 0
+            },
+            "end": {
+              "line": 12,
+              "column": 14
+            }
+          }
+        },
+        "right": {
+          "type": "Identifier",
+          "name": "blocks",
+          "range": [
+            1568,
+            1574
+          ],
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 17
+            },
+            "end": {
+              "line": 12,
+              "column": 23
+            }
+          }
+        },
+        "range": [
+          1551,
+          1574
+        ],
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 0
+          },
+          "end": {
+            "line": 12,
+            "column": 23
+          }
+        }
+      },
+      "range": [
+        1551,
+        1575
+      ],
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 24
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    88,
+    1575
+  ],
+  "loc": {
+    "start": {
+      "line": 5,
+      "column": 0
+    },
+    "end": {
+      "line": 12,
+      "column": 24
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * define all block IDs\n * http://minecraft.gamepedia.com/Data_values#Block_IDs\n ",
+      "range": [
+        0,
+        87
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

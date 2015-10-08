@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/constants/items.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/micooz/MinecraftGem" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">commands</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/command.js~Command.html">Command</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/give.js~Give.html">Give</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/msg.js~Msg.html">Msg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/say.js~Say.html">Say</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/spawnpoint.js~Spawnpoint.html">Spawnpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/tell.js~Tell.html">Tell</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/w.js~W.html">W</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">concepts</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/coordinate.js~Coordinate.html">Coordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/target.js~TargetSelector.html">TargetSelector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-items">items</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toDataTag">toDataTag</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/constants/items.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/** @module constants */
+
+/**
+ * Represents all item IDs.
+ *
+ * @see
+ * http://minecraft.gamepedia.com/Data_values#Item_IDs
+ */
+let items = {};
+
+[&quot;iron_shovel&quot;, &quot;iron_pickaxe&quot;, &quot;iron_axe&quot;, &quot;flint_and_steel&quot;, &quot;apple&quot;, &quot;bow&quot;, &quot;arrow&quot;, &quot;coal&quot;, &quot;diamond&quot;, &quot;iron_ingot&quot;, &quot;gold_ingot&quot;, &quot;iron_sword&quot;, &quot;wooden_sword&quot;, &quot;wooden_shovel&quot;, &quot;wooden_pickaxe&quot;, &quot;wooden_axe&quot;, &quot;stone_sword&quot;, &quot;stone_shovel&quot;, &quot;stone_pickaxe&quot;, &quot;stone_axe&quot;, &quot;diamond_sword&quot;, &quot;diamond_shovel&quot;, &quot;diamond_pickaxe&quot;, &quot;diamond_axe&quot;, &quot;stick&quot;, &quot;bowl&quot;, &quot;mushroom_stew&quot;, &quot;golden_sword&quot;, &quot;golden_shovel&quot;, &quot;golden_pickaxe&quot;, &quot;golden_axe&quot;, &quot;string&quot;, &quot;feather&quot;, &quot;gunpowder&quot;, &quot;wooden_hoe&quot;, &quot;stone_hoe&quot;, &quot;iron_hoe&quot;, &quot;diamond_hoe&quot;, &quot;golden_hoe&quot;, &quot;wheat_seeds&quot;, &quot;wheat&quot;, &quot;bread&quot;, &quot;leather_helmet&quot;, &quot;leather_chestplate&quot;, &quot;leather_leggings&quot;, &quot;leather_boots&quot;, &quot;chainmail_helmet&quot;, &quot;chainmail_chestplate&quot;, &quot;chainmail_leggings&quot;, &quot;chainmail_boots&quot;, &quot;iron_helmet&quot;, &quot;iron_chestplate&quot;, &quot;iron_leggings&quot;, &quot;iron_boots&quot;, &quot;diamond_helmet&quot;, &quot;diamond_chestplate&quot;, &quot;diamond_leggings&quot;, &quot;diamond_boots&quot;, &quot;golden_helmet&quot;, &quot;golden_chestplate&quot;, &quot;golden_leggings&quot;, &quot;golden_boots&quot;, &quot;flint&quot;, &quot;porkchop&quot;, &quot;cooked_porkchop&quot;, &quot;painting&quot;, &quot;golden_apple&quot;, &quot;sign&quot;, &quot;wooden_door&quot;, &quot;bucket&quot;, &quot;water_bucket&quot;, &quot;lava_bucket&quot;, &quot;minecart&quot;, &quot;saddle&quot;, &quot;iron_door&quot;, &quot;redstone&quot;, &quot;snowball&quot;, &quot;boat&quot;, &quot;leather&quot;, &quot;milk_bucket&quot;, &quot;brick&quot;, &quot;clay_ball&quot;, &quot;reeds&quot;, &quot;paper&quot;, &quot;book&quot;, &quot;slime_ball&quot;, &quot;chest_minecart&quot;, &quot;furnace_minecart&quot;, &quot;egg&quot;, &quot;compass&quot;, &quot;fishing_rod&quot;, &quot;clock&quot;, &quot;glowstone_dust&quot;, &quot;fish&quot;, &quot;cooked_fish&quot;, &quot;dye&quot;, &quot;bone&quot;, &quot;sugar&quot;, &quot;cake&quot;, &quot;bed&quot;, &quot;repeater&quot;, &quot;cookie&quot;, &quot;filled_map&quot;, &quot;shears&quot;, &quot;melon&quot;, &quot;pumpkin_seeds&quot;, &quot;melon_seeds&quot;, &quot;beef&quot;, &quot;cooked_beef&quot;, &quot;chicken&quot;, &quot;cooked_chicken&quot;, &quot;rotten_flesh&quot;, &quot;ender_pearl&quot;, &quot;blaze_rod&quot;, &quot;ghast_tear&quot;, &quot;gold_nugget&quot;, &quot;nether_wart&quot;, &quot;potion&quot;, &quot;glass_bottle&quot;, &quot;spider_eye&quot;, &quot;fermented_spider_eye&quot;, &quot;blaze_powder&quot;, &quot;magma_cream&quot;, &quot;brewing_stand&quot;, &quot;cauldron&quot;, &quot;ender_eye&quot;, &quot;speckled_melon&quot;, &quot;spawn_egg&quot;, &quot;experience_bottle&quot;, &quot;fire_charge&quot;, &quot;writable_book&quot;, &quot;written_book&quot;, &quot;emerald&quot;, &quot;item_frame&quot;, &quot;flower_pot&quot;, &quot;carrot&quot;, &quot;potato&quot;, &quot;baked_potato&quot;, &quot;poisonous_potato&quot;, &quot;map&quot;, &quot;golden_carrot&quot;, &quot;skull&quot;, &quot;carrot_on_a_stick&quot;, &quot;nether_star&quot;, &quot;pumpkin_pie&quot;, &quot;fireworks&quot;, &quot;firework_charge&quot;, &quot;enchanted_book&quot;, &quot;comparator&quot;, &quot;netherbrick&quot;, &quot;quartz&quot;, &quot;tnt_minecart&quot;, &quot;hopper_minecart&quot;, &quot;prismarine_shard&quot;, &quot;prismarine_crystals&quot;, &quot;rabbit&quot;, &quot;cooked_rabbit&quot;, &quot;rabbit_stew&quot;, &quot;rabbit_foot&quot;, &quot;rabbit_hide&quot;, &quot;armor_stand&quot;, &quot;iron_horse_armor&quot;, &quot;golden_horse_armor&quot;, &quot;diamond_horse_armor&quot;, &quot;lead&quot;, &quot;name_tag&quot;, &quot;command_block_minecart&quot;, &quot;mutton&quot;, &quot;cooked_mutton&quot;, &quot;banner&quot;, &quot;spruce_door&quot;, &quot;birch_door&quot;, &quot;jungle_door&quot;, &quot;acacia_door&quot;, &quot;dark_oak_door&quot;, &quot;chorus_fruit&quot;, &quot;popped_chorus_fruit&quot;, &quot;beetroot&quot;, &quot;beetroot_seeds&quot;, &quot;beetroot_soup&quot;, &quot;splash_potion&quot;, &quot;spectral_arrow&quot;, &quot;tipped_arrow&quot;, &quot;lingering_potion&quot;, &quot;shield&quot;, &quot;record_cat&quot;, &quot;record_blocks&quot;, &quot;record_chirp&quot;, &quot;record_far&quot;, &quot;record_mall&quot;, &quot;record_mellohi&quot;, &quot;record_stal&quot;, &quot;record_strad&quot;, &quot;record_ward&quot;, &quot;record_wait&quot;]
+  .forEach(function (key) {
+    items[key] = `minecraft:${key}`;
+  });
+
+export default items;</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

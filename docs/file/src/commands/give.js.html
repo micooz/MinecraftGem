@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/commands/give.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/micooz/MinecraftGem" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">commands</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/command.js~Command.html">Command</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/give.js~Give.html">Give</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/msg.js~Msg.html">Msg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/say.js~Say.html">Say</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/spawnpoint.js~Spawnpoint.html">Spawnpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/tell.js~Tell.html">Tell</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/w.js~W.html">W</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">concepts</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/coordinate.js~Coordinate.html">Coordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/target.js~TargetSelector.html">TargetSelector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-items">items</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toDataTag">toDataTag</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/commands/give.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/** @module commands */
+
+import Command from &apos;./command&apos;;
+import Helper from &apos;../helpers&apos;;
+const {Item, Player} = require(&apos;../concepts&apos;);
+
+/**
+ * Gives an item to a player.
+ * @example
+ * let give = new Give(
+ *   new Player(&apos;Mike&apos;),
+ *   new Item(&apos;apple&apos;),
+ *   64,
+ *   0,
+ *   {...}
+ * );
+ * @see http://minecraft.gamepedia.com/Commands#give
+ */
+export default class Give extends Command {
+
+  /**
+   * @param {Player} player
+   * @param {Item} item
+   * @param {Number} amount
+   * @param {Number} data
+   * @param {Object} dataTag
+   */
+  constructor(player, item, amount = 1, data = 0, dataTag = {}) {
+    super();
+    this._name = &apos;give&apos;;
+
+    if (!(player instanceof Player)) {
+      throw new TypeError(&apos;player should be an instance of Player&apos;);
+    }
+
+    if (!(item instanceof Item)) {
+      throw new TypeError(&apos;item should be an instance of Item&apos;);
+    }
+
+    this._options = [
+      player.toString(),
+      item.toString(),
+      amount.toString(),
+      data.toString(),
+      Helper.toDataTag(dataTag)
+    ].join(&apos; &apos;);
+  }
+
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/constants/blocks.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/micooz/MinecraftGem" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">commands</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/command.js~Command.html">Command</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/give.js~Give.html">Give</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/msg.js~Msg.html">Msg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/say.js~Say.html">Say</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/spawnpoint.js~Spawnpoint.html">Spawnpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/tell.js~Tell.html">Tell</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/commands/w.js~W.html">W</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">concepts</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/coordinate.js~Coordinate.html">Coordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/concepts/target.js~TargetSelector.html">TargetSelector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-items">items</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toDataTag">toDataTag</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/constants/blocks.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * define all block IDs
+ * http://minecraft.gamepedia.com/Data_values#Block_IDs
+ */
+let blocks = [];
+
+[&quot;grass&quot;, &quot;planks&quot;, &quot;flowing_water&quot;, &quot;flowing_lava&quot;, &quot;log&quot;, &quot;lapis_ore&quot;, &quot;lapis_block&quot;, &quot;noteblock&quot;, &quot;golden_rail&quot;, &quot;web&quot;, &quot;tallgrass&quot;, &quot;deadbush&quot;, &quot;piston_head&quot;, &quot;piston_extension&quot;, &quot;yellow_flower&quot;, &quot;red_flower&quot;, &quot;gold_block&quot;, &quot;iron_block&quot;, &quot;brick_block&quot;, &quot;mossy_cobblestone&quot;, &quot;mob_spawner&quot;, &quot;oak_stairs&quot;, &quot;diamond_block&quot;, &quot;lit_furnace&quot;, &quot;standing_sign&quot;, &quot;wooden_door&quot;, &quot;stone_stairs&quot;, &quot;wall_sign&quot;, &quot;lit_redstone_ore&quot;, &quot;unlit_redstone_torch&quot;, &quot;snow_layer&quot;, &quot;reeds&quot;, &quot;lit_pumpkin&quot;, &quot;unpowered_repeater&quot;, &quot;powered_repeater&quot;, &quot;stonebrick&quot;, &quot;brown_mushroom_block&quot;, &quot;red_mushroom_block&quot;, &quot;melon_block&quot;, &quot;vine&quot;, &quot;waterlily&quot;, &quot;enchanting_table&quot;, &quot;lit_redstone_lamp&quot;, &quot;emerald_block&quot;, &quot;spruce_stairs&quot;, &quot;birch_stairs&quot;, &quot;jungle_stairs&quot;, &quot;carrots&quot;, &quot;potatoes&quot;, &quot;skull&quot;, &quot;light_weighted_pressure_plate&quot;, &quot;heavy_weighted_pressure_plate&quot;, &quot;unpowered_comparator&quot;, &quot;powered_comparator&quot;, &quot;daylight_detector&quot;, &quot;redstone_block&quot;, &quot;quartz_ore&quot;, &quot;quartz_block&quot;, &quot;stained_hardened_clay&quot;, &quot;leaves2&quot;, &quot;log2&quot;, &quot;acacia_stairs&quot;, &quot;dark_oak_stairs&quot;, &quot;slime&quot;, &quot;hay_block&quot;, &quot;coal_block&quot;, &quot;double_plant&quot;, &quot;standing_banner&quot;, &quot;wall_banner&quot;, &quot;daylight_detector_inverted&quot;, &quot;double_stone_slab2&quot;, &quot;stone_slab2&quot;, &quot;spruce_fence_gate&quot;, &quot;birch_fence_gate&quot;, &quot;jungle_fence_gate&quot;, &quot;dark_oak_fence_gate&quot;, &quot;acacia_fence_gate&quot;, &quot;spruce_fence&quot;, &quot;birch_fence&quot;, &quot;jungle_fence&quot;, &quot;dark_oak_fence&quot;, &quot;end_bricks&quot;, &quot;beetroots&quot;]
+  .forEach(function (key) {
+    blocks[key] = `minecraft:${key}`;
+  });
+
+module.exports = blocks;</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
