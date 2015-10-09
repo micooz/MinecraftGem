@@ -137,7 +137,7 @@ I use `mocha` to do tests, simply run:
 
 All documentation resides here:
 
-https://micooz.github.io/MinecraftGem/docs/index.html
+http://minecraft.micooz.com
 
 ## Todos / Progress
 
