@@ -14,13 +14,15 @@ I hope that someone can use this library to make a web app, providing GUI featur
 
 ## Features
 
-* Concepts
+*Concepts:*
+
 - [x] Item
 - [x] TargetSelector
 - [x] Coordinate
 - [x] Player
 
-* Commands
+*Commands:*
+
 - [x] give
 - [x] tell / msg / w
 - [x] say
@@ -28,7 +30,7 @@ I hope that someone can use this library to make a web app, providing GUI featur
 
 ## APIs
 
-Generally, each API provides a `toString()` method to get a plain string.
+Generally, every API provides a `toString()` method to get a plain string.
 
 ### Concepts
 
@@ -130,6 +132,12 @@ Some other commands are not listed above, I will put them in the specific docume
 I use `mocha` to do tests, simply run:
 
     $ npm test
+    
+## Documentation
+
+All documentation resides here:
+
+https://micooz.github.io/MinecraftGem/docs/index.html
 
 ## Todos / Progress
 
