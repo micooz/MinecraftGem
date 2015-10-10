@@ -127,9 +127,15 @@ To give 64 apples to Mike:
 
 Some other commands are not listed above, I will put them in the specific document.
 
+## Build
+
+You should build before test:
+
+    $ npm babel
+
 ## Test
 
-I use `mocha` to do tests, simply run:
+I use `mocha` to do tests, start a new terminal and simply run:
 
     $ npm test
     
