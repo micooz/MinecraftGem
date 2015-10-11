@@ -4,5 +4,6 @@ testRunner(
   [].concat(
     require('./concepts'),
     require('./commands'),
-    require('./datatag')
+    require('./datatag'),
+    require('./nbt')
   ));
