@@ -13,13 +13,13 @@
     "utility"
   ],
   "devDependencies": {
-    "babel": "^5.8.23",
+    "babel": "^6.5.2",
     "esdoc": "^0.4.0",
-    "lodash": "^3.10.1",
-    "mocha": "^2.3.3",
+    "lodash": "^4.16.6",
+    "mocha": "^3.1.2",
     "mocha-traceur": "^2.1.0",
-    "should": "^7.1.0",
-    "traceur": "0.0.91"
+    "should": "^11.1.1",
+    "traceur": "0.0.111"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha --compilers js:mocha-traceur test",
